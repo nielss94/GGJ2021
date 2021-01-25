@@ -11,6 +11,7 @@ public class Rotator : MonoBehaviour
     {
         // Do rotate some more
         transform.Rotate(angle * (Time.deltaTime * speed));
+        transform.position = new Vector3(0, Mathf.Sin(speed), 0);
     }
 
     private void Start()
@@ -20,6 +21,6 @@ public class Rotator : MonoBehaviour
 
     private void Awesome()
     {
-        Debug.Log("Awesome");
+        Debug.Log("Not so Awesome");
     }
 }
