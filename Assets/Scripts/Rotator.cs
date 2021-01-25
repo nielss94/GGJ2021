@@ -10,7 +10,7 @@ public class Rotator : MonoBehaviour
     private void Update()
     {
         // Do rotate some more
-        transform.Rotate(angle * (Time.deltaTime * speed * 20));
+        transform.Rotate(angle * (Time.deltaTime * speed));
     }
 
     private void Start()
