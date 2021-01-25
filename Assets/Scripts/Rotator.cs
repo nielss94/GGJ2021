@@ -12,6 +12,7 @@ public class Rotator : MonoBehaviour
         // Do rotate some more
         transform.Rotate(angle * (Time.deltaTime * speed));
         transform.position = new Vector3(0, Mathf.Sin(speed), 0);
+        Awesome();
     }
 
     private void Start()
