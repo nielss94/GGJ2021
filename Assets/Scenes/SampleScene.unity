@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e235cbe5986cb419b1f44c72454424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: {x: 0, y: 10, z: 0}
+  angle: {x: 7.85, y: 10, z: 0}
   speed: 10
 --- !u!64 &1412886274
 MeshCollider:
