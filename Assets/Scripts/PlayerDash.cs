@@ -11,13 +11,15 @@ public class PlayerDash : MonoBehaviour
 {
     public static event Action OnDash = delegate {  };
     public static event Action OnStopDash = delegate {  };
+    
 
+    [Header("Dash")]
+    public float dashKnockbackForce;
     public float dashCooldown;
     public float dashSpeed;
     public float dashSpeedRampUpDuration;
     public float dashDuration;
     public KeyCode dashKey;
-
     [ReadOnly] public float baseForwardSpeed; 
     
     private BaseFirstPersonController baseFirstPersonController;
@@ -40,6 +42,18 @@ public class PlayerDash : MonoBehaviour
         if (Input.GetKeyDown(dashKey) && !dashing && Time.time > lastDashTimestamp + dashCooldown)
         {
             Dash();
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.TryGetComponent(out Child child) && dashing)
+        {
+            if (child.canGetKnockedDown)
+            {
+                Vector3 normalizedAngle = (child.transform.position - transform.position) + Vector3.up + transform.TransformDirection(Vector3.forward).normalized;
+                child.KnockBack(normalizedAngle, dashKnockbackForce);
+            }
         }
     }
 
