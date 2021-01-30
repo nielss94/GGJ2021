@@ -43,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abb5048cb4ea49d29aa9883c72ea506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetPointsOnAwake: 1

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+    
     public static event Action OnGameStarted = delegate { };
     public static event Action OnGamePaused = delegate { };
     public static event Action OnGameResumed = delegate { };
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private RectTransform pauseMenu;
 
     [SerializeField] private KeyCode pauseKey;
+
     
     private void Start()
     {
@@ -35,7 +38,7 @@ public class GameManager : MonoBehaviour
         OnGameResumed?.Invoke();
     }
 
-    public void EndGame()
+    public static void EndGame()
     {
         OnGameEnded?.Invoke();
     }
