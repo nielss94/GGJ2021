@@ -213,7 +213,7 @@ namespace ECM.Controllers
 
             jump = Input.GetButton("Jump");
 
-            crouch = Input.GetKey(KeyCode.C);
+            crouch = Input.GetButton("Crouch");
         }
 
         #endregion
