@@ -8,6 +8,7 @@ public class Child : MonoBehaviour
 {
     public float knockdownTime;
     public bool canGetKnockedDown = true;
+
     public void KnockBack(Vector3 normalizedAngle, float force)
     {
         GetComponent<Rigidbody>().AddForce(normalizedAngle * force, ForceMode.Impulse);
