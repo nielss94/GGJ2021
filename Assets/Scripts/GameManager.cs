@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public event Action OnGameStarted = delegate { };
-    public event Action OnGamePaused = delegate { };
-    public event Action OnGameResumed = delegate { };
-    public event Action OnGameEnded = delegate { };
+    public static event Action OnGameStarted = delegate { };
+    public static event Action OnGamePaused = delegate { };
+    public static event Action OnGameResumed = delegate { };
+    public static event Action OnGameEnded = delegate { };
 
     [SerializeField] private RectTransform pauseMenu;
 
