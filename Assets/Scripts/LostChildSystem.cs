@@ -13,6 +13,8 @@ public class LostChildSystem : MonoBehaviour
     [SerializeField] private List<Child> children;
     [SerializeField] private Child lostChild;
 
+    private LostChildOrchestration lostChildOrchestration;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -23,10 +25,10 @@ public class LostChildSystem : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        lostChildOrchestration = GetComponent<LostChildOrchestration>();
 
-        FindAllChildren();
-
-        GameManager.OnGameStarted += ChooseNewLostChild;
+        GameManager.OnGameStarted += Orchestrate;
     }
 
     private void Update()
@@ -53,6 +55,15 @@ public class LostChildSystem : MonoBehaviour
     public bool IsCurrentLostChild(Child child)
     {
         return child == lostChild;
+    }
+
+    private void Orchestrate()
+    {
+        FindAllChildren();
+
+        children = lostChildOrchestration.Orchestrate(children);
+        
+        ChooseNewLostChild();
     }
 
     private void ChooseNewLostChild()
