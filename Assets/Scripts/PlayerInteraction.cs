@@ -33,7 +33,9 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (LostChildSystem.Instance.DeliverChild(takenChild))
             {
+                takenChild.gameObject.SetActive(false);
                 takenChild = null;
+                OnDeliverChild.Invoke();
             }
         }
     }
@@ -95,7 +97,7 @@ public class PlayerInteraction : MonoBehaviour
     private void TakeChild(Child child)
     {
         takenChild = child;
-        takenChild.gameObject.SetActive(false);
+        takenChild.transform.parent = this.transform;
         
         OnTakeChild?.Invoke(takenChild);
     }
