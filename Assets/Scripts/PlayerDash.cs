@@ -24,6 +24,7 @@ public class PlayerDash : MonoBehaviour
     
     private BaseFirstPersonController baseFirstPersonController;
     private bool dashing = false;
+    private bool isCrouching = false;
     
     public static event Action<float, float> OnDashTimerChanged = delegate {  };
     private float dashTimer;
@@ -32,6 +33,8 @@ public class PlayerDash : MonoBehaviour
     {
         baseFirstPersonController = GetComponent<BaseFirstPersonController>();
         baseForwardSpeed = baseFirstPersonController.forwardSpeed;
+
+        BaseCharacterController.OnSetCrouch += b => isCrouching = b;
     }
 
     private void OnValidate()
@@ -65,13 +68,18 @@ public class PlayerDash : MonoBehaviour
             if (child.canGetKnockedDown)
             {
                 Vector3 normalizedAngle = (child.transform.position - transform.position) + Vector3.up + transform.TransformDirection(Vector3.forward).normalized;
-                child.KnockBack(normalizedAngle, dashKnockbackForce);
+                child.KnockBack(normalizedAngle.normalized, dashKnockbackForce);
             }
         }
     }
 
     private void Dash()
     {
+        if (isCrouching)
+        {
+            return;
+        }
+
         dashing = true;
         OnDash?.Invoke();
         dashTimer = dashCooldown;
@@ -85,8 +93,8 @@ public class PlayerDash : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         
-        OnStopDash?.Invoke();
         baseFirstPersonController.forwardSpeed = baseForwardSpeed;
+        OnStopDash?.Invoke();
         dashing = false;
     }
 
