@@ -10,12 +10,15 @@ public class LostChildRenderer : MonoBehaviour
 
     public void NewChild(Child child)
     {
+        currentChild = Instantiate(child, childPos.position, Quaternion.identity, childPos).gameObject;
+        Destroy(currentChild.gameObject.GetComponent<Child>());
+    }
+
+    public void RemoveChild()
+    {
         if (currentChild)
         {
             Destroy(currentChild);
         }
-
-        currentChild = Instantiate(child, childPos.position, Quaternion.identity, childPos).gameObject;
-        Destroy(currentChild.gameObject.GetComponent<Child>());
     }
 }
