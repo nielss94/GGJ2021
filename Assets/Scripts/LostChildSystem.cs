@@ -24,7 +24,7 @@ public class LostChildSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChooseNewLostChild();    
         }
