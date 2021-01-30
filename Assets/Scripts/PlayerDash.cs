@@ -24,7 +24,9 @@ public class PlayerDash : MonoBehaviour
     
     private BaseFirstPersonController baseFirstPersonController;
     private bool dashing = false;
-    private float lastDashTimestamp;
+    
+    public static event Action<float, float> OnDashTimerChanged = delegate {  };
+    private float dashTimer;
 
     private void Awake()
     {
@@ -39,7 +41,18 @@ public class PlayerDash : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(dashKey) && !dashing && Time.time > lastDashTimestamp + dashCooldown)
+        if (dashTimer > 0)
+        {
+            dashTimer -= Time.deltaTime;
+            
+            OnDashTimerChanged.Invoke(dashTimer < 0 ? 0 : dashTimer, dashCooldown);
+        }
+        else
+        {
+            dashTimer = 0;
+        }
+        
+        if (Input.GetKeyDown(dashKey) && !dashing && dashTimer == 0)
         {
             Dash();
         }
@@ -61,7 +74,7 @@ public class PlayerDash : MonoBehaviour
     {
         dashing = true;
         OnDash?.Invoke();
-        lastDashTimestamp = Time.time;
+        dashTimer = dashCooldown;
         StartDash().OnComplete(() =>
         {
             StartCoroutine(StopDashAfterSeconds(dashDuration));
