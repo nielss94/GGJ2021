@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace ECM.Controllers
 {
@@ -13,6 +14,9 @@ namespace ECM.Controllers
 
     public class BaseFirstPersonController : BaseCharacterController
     {
+        
+        public static event Action<bool> OnSetRunning = delegate {  };
+        
         #region EDITOR EXPOSED FIELDS
 
         [Header("First Person")]
@@ -208,6 +212,15 @@ namespace ECM.Controllers
                 y = 0.0f,
                 z = Input.GetAxisRaw("Vertical")
             };
+            
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                OnSetRunning.Invoke(true);
+            }
+            else
+            {
+                OnSetRunning.Invoke(false);
+            }
 
             // run = Input.GetButton("Fire3");
 
