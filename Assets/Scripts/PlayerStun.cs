@@ -15,7 +15,6 @@ public class PlayerStun : MonoBehaviour
 
     private void Start() {
         initialStunPivotPos = stunPivot.transform.localPosition;
-        Debug.Log(initialStunPivotPos);
     }
 
     private void Update() {
@@ -25,16 +24,24 @@ public class PlayerStun : MonoBehaviour
     }
     
     public IEnumerator Stun() {
-        yield return new WaitForSeconds(0.2f);
         isStunned = true;
-        stunPivot.transform.localPosition += transform.up * 0.5f;
-        stunPivot.transform.DOLocalMove(initialStunPivotPos, 0.4f);
-        BaseFirstPersonController fpController = GetComponent<BaseFirstPersonController>();
+        
         stunPivot.SetActive(true);
+        stunPivot.transform.localPosition += transform.up * 0.5f;
+        Vector3 raisedStunPos = stunPivot.transform.localPosition;
+        stunPivot.transform.DOLocalMove(initialStunPivotPos, 0.2f);
+        
+        // Small wait to let player get pushed back
+        yield return new WaitForSeconds(0.2f);
+
+        BaseFirstPersonController fpController = GetComponent<BaseFirstPersonController>();
         fpController.GetComponent<BaseFirstPersonController>().pause = true;
         yield return new WaitForSeconds(stunDuration);
-        stunPivot.SetActive(false);
         fpController.GetComponent<BaseFirstPersonController>().pause = false;
+        
+        stunPivot.transform.DOLocalMove(raisedStunPos, 0.2f).OnComplete(() => {
+            stunPivot.SetActive(false);
+        });
         isStunned = false;
     }
 }

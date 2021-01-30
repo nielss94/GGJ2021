@@ -8,12 +8,12 @@ using Random = UnityEngine.Random;
 public class Turret : MonoBehaviour {
 
     public int stunDuration = 1;
-    public int shootDelay = 1;
-    public float ballSpeed = 10;
+    public int shootInterval = 3;
+    public float ballSpeed = 5;
     [Range(1, 10)]
     public float ballSpeedRandomness = 1.01f;
-    public float spread = 0.01f;
-    public int despawnTime = 10;
+    public float spread = 0.3f;
+    public int despawnTime = 5;
     public GameObject turretBall;
     public Transform ballSpawnPoint;
 
@@ -26,7 +26,7 @@ public class Turret : MonoBehaviour {
     private IEnumerator ShootRoutine() {
         while (active) {
             Shoot();
-            yield return new WaitForSeconds(shootDelay);
+            yield return new WaitForSeconds(shootInterval);
         }
     }
 

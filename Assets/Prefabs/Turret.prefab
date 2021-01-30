@@ -253,11 +253,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stunDuration: 1
-  shootDelay: 3
+  shootInterval: 3
   ballSpeed: 5
   ballSpeedRandomness: 1.01
   spread: 0.3
-  despawnTime: 10
+  despawnTime: 5
   turretBall: {fileID: 239541535869637775, guid: 263165be4bd3e1540a4d9593edd7c119,
     type: 3}
   ballSpawnPoint: {fileID: 1389092506563147373}
