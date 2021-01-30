@@ -52,7 +52,11 @@ public class TimeSystem : MonoBehaviour
             
             SendReadableTime();
         }
-        
+    }
+    
+    public float GetTimer()
+    {
+        return timer;
     }
 
     private void SendReadableTime()
