@@ -12,12 +12,20 @@ ModelImporter:
   - first:
       74: -6185155371445809522
     second: Throw
+  - first:
+      74: -6589674515374901747
+    second: Propellor
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert2
     second: {fileID: 2100000, guid: c4e267409bc08db42a47ba04965c9664, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 0fe0175fb864cf940a8219e9b9a0cfe5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -132,6 +140,35 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Propellor
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 100
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 10
     isReadable: 0
   meshes:
     lODScreenPercentages: []
