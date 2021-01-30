@@ -49,6 +49,6 @@ public class PointSystem : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerPrefs.SetInt("points", points);
+        PlayerPrefs.SetInt("InGamePoints", points);
     }
 }
