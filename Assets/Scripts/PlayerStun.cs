@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -6,6 +7,8 @@ using UnityEngine;
 
 public class PlayerStun : MonoBehaviour
 {
+    public static event Action<bool> OnSetStunned = delegate {  };
+    
     public GameObject stunPivot;
     public int stunDuration = 1;
     public float stunRotationSpeed = 100f;
@@ -25,6 +28,7 @@ public class PlayerStun : MonoBehaviour
     
     public IEnumerator Stun() {
         isStunned = true;
+        OnSetStunned.Invoke(isStunned);
         
         stunPivot.SetActive(true);
         stunPivot.transform.localPosition += transform.up * 0.5f;
@@ -43,5 +47,6 @@ public class PlayerStun : MonoBehaviour
             stunPivot.SetActive(false);
         });
         isStunned = false;
+        OnSetStunned.Invoke(isStunned);
     }
 }

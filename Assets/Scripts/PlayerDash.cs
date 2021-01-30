@@ -24,6 +24,7 @@ public class PlayerDash : MonoBehaviour
     
     private BaseFirstPersonController baseFirstPersonController;
     private bool dashing = false;
+    private bool isCrouching = false;
     
     public static event Action<float, float> OnDashTimerChanged = delegate {  };
     private float dashTimer;
@@ -32,6 +33,8 @@ public class PlayerDash : MonoBehaviour
     {
         baseFirstPersonController = GetComponent<BaseFirstPersonController>();
         baseForwardSpeed = baseFirstPersonController.forwardSpeed;
+
+        BaseCharacterController.OnSetCrouch += b => isCrouching = b;
     }
 
     private void OnValidate()
@@ -72,6 +75,11 @@ public class PlayerDash : MonoBehaviour
 
     private void Dash()
     {
+        if (isCrouching)
+        {
+            return;
+        }
+
         dashing = true;
         OnDash?.Invoke();
         dashTimer = dashCooldown;
