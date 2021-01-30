@@ -30,7 +30,20 @@ public class LostChildSystem : MonoBehaviour
         }
     }
 
-    private bool IsCurrentLostChild(Child child)
+    public bool DeliverChild(Child child)
+    {
+        if (!IsCurrentLostChild(child))
+        {
+            return false;
+        }
+        
+        ChooseNewLostChild();   
+        PointAwardSystem.Instance.DoAwardPoints();
+        
+        return true;
+    }
+
+    public bool IsCurrentLostChild(Child child)
     {
         return child == lostChild;
     }

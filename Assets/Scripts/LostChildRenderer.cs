@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class LostChildRenderer : MonoBehaviour
 {
     [SerializeField] private Transform childPos;
-    private Child currentChild;
+    [SerializeField] private GameObject currentChild;
 
     public void NewChild(Child child)
     {
@@ -14,7 +15,7 @@ public class LostChildRenderer : MonoBehaviour
             Destroy(currentChild);
         }
 
-        Child newChild = Instantiate(child, childPos.position, Quaternion.identity, childPos);
-        Destroy(newChild.gameObject.GetComponent<Child>());
+        currentChild = Instantiate(child, childPos.position, Quaternion.identity, childPos).gameObject;
+        Destroy(currentChild.gameObject.GetComponent<Child>());
     }
 }
