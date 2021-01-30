@@ -38,8 +38,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playground/Zeger.unity
     guid: 81cd51bf88ee63842a83668674db6e9a
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Score.unity
-    guid: 1c2d24bc64e9f4c12a1aef90f405fb86
   m_configObjects: {}
