@@ -97,7 +97,9 @@ public class PlayerInteraction : MonoBehaviour
     private void TakeChild(Child child)
     {
         takenChild = child;
-        takenChild.transform.parent = this.transform;
+        takenChild.transform.SetParent(transform);
+        takenChild.GetComponent<Rigidbody>().isKinematic = true;
+        takenChild.GetComponent<Collider>().enabled = false;
         
         OnTakeChild?.Invoke(takenChild);
     }
