@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Child : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void KnockBack(Vector3 normalizedAngle, float force)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GetComponent<Rigidbody>().AddForce(normalizedAngle * force, ForceMode.Impulse);
     }
 }
