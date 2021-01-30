@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Propellor
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Root
+    m_Weight: 0
+  - m_Path: Root/Hip
+    m_Weight: 0
+  - m_Path: Root/Hip/lHip
+    m_Weight: 0
+  - m_Path: Root/Hip/lHip/lKnee
+    m_Weight: 0
+  - m_Path: Root/Hip/lHip/lKnee/lFoot
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/lCollar
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/lCollar/lArm
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/lCollar/lArm/lElbow
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/lCollar/lArm/lElbow/lHand
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/Neck
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/Neck/Head
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/Neck/Head/Propellor
+    m_Weight: 1
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/rCollar
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/rCollar/rArm
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/rCollar/rArm/rErbow
+    m_Weight: 0
+  - m_Path: Root/Hip/Pelvis/MiddleSpine/UpperSpine/rCollar/rArm/rErbow/rHand
+    m_Weight: 0
+  - m_Path: Root/Hip/rHip
+    m_Weight: 0
+  - m_Path: Root/Hip/rHip/rKnee
+    m_Weight: 0
+  - m_Path: Root/Hip/rHip/rKnee/rFoot
+    m_Weight: 0
+  - m_Path: Root/mesh
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats/Hat_Apple
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats/Hat_Bird
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats/Hat_Hair1
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats/Hat_Hair2
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats/Hat_Pirate
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats/Hat_Propeller
+    m_Weight: 0
+  - m_Path: Root/mesh/Hats/Hat_TopHat
+    m_Weight: 0
+  - m_Path: Root/mesh/Kid
+    m_Weight: 0
