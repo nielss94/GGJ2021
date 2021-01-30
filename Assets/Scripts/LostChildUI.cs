@@ -12,6 +12,7 @@ public class LostChildUI : MonoBehaviour
     private void Awake()
     {
         LostChildSystem.OnNewChildSelected += NewChildSelected;
+        PlayerInteraction.OnTakeChild += RemoveChildFromUI;
     }
 
     private void NewChildSelected(Child child)
@@ -20,6 +21,16 @@ public class LostChildUI : MonoBehaviour
             .OnComplete(() =>
             {
                 lostChildRenderer.NewChild(child);
+                renderImage.DOFade(1, .5f);
+            });
+    }
+
+    private void RemoveChildFromUI(Child child)
+    {
+        renderImage.DOFade(0, .5f)
+            .OnComplete(() =>
+            {
+                lostChildRenderer.RemoveChild();
                 renderImage.DOFade(1, .5f);
             });
     }

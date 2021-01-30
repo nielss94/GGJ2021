@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class LostChildSystem : MonoBehaviour
 {
+    public static LostChildSystem Instance { get; private set; }
     public static event Action<Child> OnNewChildSelected = delegate { };
     
     [SerializeField] private List<Child> children;
@@ -14,6 +15,15 @@ public class LostChildSystem : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         FindAllChildren();
     }
 
