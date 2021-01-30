@@ -85,8 +85,8 @@ public class PlayerDash : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         
-        OnStopDash?.Invoke();
         baseFirstPersonController.forwardSpeed = baseForwardSpeed;
+        OnStopDash?.Invoke();
         dashing = false;
     }
 
