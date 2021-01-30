@@ -14,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private LayerMask childHitLayer;
     [SerializeField] private LayerMask deliveryHitLayer;
     [SerializeField] private float interactionDistance;
-
+    [SerializeField] private Transform childHolder;
     [SerializeField] private KeyCode interactButton;
 
     private Child interactingChild = null;
@@ -97,9 +97,11 @@ public class PlayerInteraction : MonoBehaviour
     private void TakeChild(Child child)
     {
         takenChild = child;
-        takenChild.transform.SetParent(transform);
+        takenChild.transform.SetParent(childHolder);
         takenChild.GetComponent<Rigidbody>().isKinematic = true;
         takenChild.GetComponent<Collider>().enabled = false;
+        takenChild.transform.localPosition = Vector3.zero;
+        takenChild.transform.localEulerAngles = Vector3.zero;
         
         OnTakeChild?.Invoke(takenChild);
     }

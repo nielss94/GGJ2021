@@ -11,31 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Playground/Niels.unity
-    guid: 6a785b7efbb7b7340b87f10b01f8f954
-  - enabled: 1
-    path: Assets/Scenes/Playground/Bart.unity
-    guid: 95d508e11ce41ce4b8aa31780f289d37
-  - enabled: 1
-    path: Assets/Scenes/Playground/Chris.unity
-    guid: c21c9618c7c7d7a4682318c8fec8a94f
-  - enabled: 1
-    path: Assets/Scenes/Playground/Dennis.unity
-    guid: 2fe585eed42ab6d4283043771fad1760
-  - enabled: 1
-    path: Assets/Scenes/Playground/Lei.unity
-    guid: e1ac2a8dc2a797e4786b1902ff1d36d0
-  - enabled: 1
-    path: Assets/Scenes/Playground/Mitchell.unity
-    guid: e0b196522ccb1804e9ecd9543974af90
-  - enabled: 1
-    path: Assets/Scenes/Playground/Owen.unity
-    guid: a68b73552a4448d4f902be25e45b924a
-  - enabled: 1
-    path: Assets/Scenes/Playground/Stefan.unity
-    guid: f78c105b2d3e00640b1755779027f582
-  - enabled: 1
-    path: Assets/Scenes/Playground/Zeger.unity
-    guid: 81cd51bf88ee63842a83668674db6e9a
   m_configObjects: {}
