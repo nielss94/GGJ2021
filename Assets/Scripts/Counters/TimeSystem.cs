@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class TimeSystem : MonoBehaviour
 {
-
-    public event Action<float> OnTimeChanged = delegate { };
-    public event Action OnTimeStarted = delegate { };
-    public event Action OnTimeEnded = delegate { };
+    public static TimeSystem Instance { get; private set; }
+    
+    public static event Action<float> OnTimeChanged = delegate { };
+    public static event Action OnTimeStarted = delegate { };
+    public static event Action OnTimeEnded = delegate { };
     
     [SerializeField]
     private float time = 10;
@@ -14,16 +15,24 @@ public class TimeSystem : MonoBehaviour
     private float timer;
     private bool startedTime = false;
     
-    
-    
-    public event Action<string> OnReadableTimeChanged = delegate { };
+    public static event Action<string> OnReadableTimeChanged = delegate { };
     
     private int minutes = 0;
     private int seconds = 0;
-
-    private void Start()
+    
+    
+    private void Awake()
     {
-        // GameManager.onGameStarted += StartTime()
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+        GameManager.OnGameStarted += StartTime;
     }
 
     void Update()

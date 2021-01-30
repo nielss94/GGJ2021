@@ -7,14 +7,10 @@ using UnityEngine;
 public class TimeUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-
-    [Header("Dependecies")]
-    [SerializeField]
-    private TimeSystem timeSystem;
-
-    private void Start()
+    
+    private void Awake()
     {
-        timeSystem.OnReadableTimeChanged += ChangeTimeText;
+        TimeSystem.OnReadableTimeChanged += ChangeTimeText;
     }
 
     private void ChangeTimeText(string time)
