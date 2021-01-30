@@ -25,10 +25,7 @@ public class LostChildSystem : MonoBehaviour
         }
 
         FindAllChildren();
-    }
 
-    private void Start()
-    {
         GameManager.OnGameStarted += ChooseNewLostChild;
     }
 
