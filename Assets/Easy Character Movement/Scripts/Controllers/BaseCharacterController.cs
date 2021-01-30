@@ -1,4 +1,5 @@
-﻿using ECM.Components;
+﻿using System;
+using ECM.Components;
 using ECM.Helpers;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -15,6 +16,9 @@ namespace ECM.Controllers
 
     public class BaseCharacterController : MonoBehaviour
     {
+        public static event Action<bool> OnSetCrouch = delegate {  };
+
+        
         #region EDITOR EXPOSED FIELDS
 
         [Header("Movement")]
@@ -720,6 +724,7 @@ namespace ECM.Controllers
                 // Update Crouching state
 
                 isCrouching = true;
+                OnSetCrouch.Invoke(isCrouching);
             }
             else
             {
@@ -740,6 +745,7 @@ namespace ECM.Controllers
                 // Update crouching state
 
                 isCrouching = false;
+                OnSetCrouch.Invoke(isCrouching);
             }
         }
 
