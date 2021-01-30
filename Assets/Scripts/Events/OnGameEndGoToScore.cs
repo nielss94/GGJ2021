@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameEndToScore : MonoBehaviour
+public class OnGameEndGoToScore : MonoBehaviour
 {
     private void Awake()
     {
