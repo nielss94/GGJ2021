@@ -49,8 +49,11 @@ public class PlayerDash : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Child child) && dashing)
         {
-            Vector3 normalizedAngle = (child.transform.position - transform.position) + Vector3.up + transform.TransformDirection(Vector3.forward).normalized;
-            child.KnockBack(normalizedAngle, dashKnockbackForce);
+            if (child.canGetKnockedDown)
+            {
+                Vector3 normalizedAngle = (child.transform.position - transform.position) + Vector3.up + transform.TransformDirection(Vector3.forward).normalized;
+                child.KnockBack(normalizedAngle, dashKnockbackForce);
+            }
         }
     }
 

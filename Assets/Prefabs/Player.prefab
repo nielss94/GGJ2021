@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6087ab109ac3f45b0c38e927367c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashKnockbackForce: 7
+  dashKnockbackForce: 10
   dashCooldown: 2
   dashSpeed: 10
   dashSpeedRampUpDuration: 0.2
