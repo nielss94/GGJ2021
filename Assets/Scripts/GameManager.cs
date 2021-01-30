@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ECM.Controllers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +18,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private KeyCode pauseKey;
 
-    
     private void Start()
     {
         StartGame();

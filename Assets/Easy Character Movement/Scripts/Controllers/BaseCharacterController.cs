@@ -839,8 +839,8 @@ namespace ECM.Controllers
             // Toggle pause / resume.
             // By default, will restore character's velocity on resume (eg: restoreVelocityOnResume = true)
 
-            if (Input.GetKeyDown(KeyCode.P))
-                pause = !pause;
+            // if (Input.GetKeyDown(KeyCode.P))
+            //     pause = !pause;
 
             // Handle user input
 
@@ -910,6 +910,9 @@ namespace ECM.Controllers
             animator = GetComponentInChildren<Animator>();
 
             rootMotionController = GetComponentInChildren<RootMotionController>();
+            
+            GameManager.OnGamePaused += () => pause = true;
+            GameManager.OnGameResumed += () => pause = false;
         }
 
         public virtual void FixedUpdate()
