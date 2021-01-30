@@ -32,6 +32,7 @@ public class Turret : MonoBehaviour {
 
     private void Shoot() {
         GameObject turretBall = Instantiate(this.turretBall);
+        turretBall.GetComponent<TurretBall>().canStun = true;
         turretBall.transform.position = ballSpawnPoint.position;
         float randomBallSpeed = ballSpeed * Random.Range(1f, ballSpeedRandomness);
         Vector3 randomSpread = ballSpawnPoint.right * Random.Range(-spread, spread);
