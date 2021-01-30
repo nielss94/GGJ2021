@@ -197,8 +197,8 @@ namespace ECM.Controllers
             // Toggle pause / resume.
             // By default, will restore character's velocity on resume (eg: restoreVelocityOnResume = true)
 
-            if (Input.GetKeyDown(KeyCode.P))
-                pause = !pause;
+            // if (Input.GetKeyDown(KeyCode.P))
+            //     pause = !pause;
 
             // Player input
 
@@ -209,7 +209,7 @@ namespace ECM.Controllers
                 z = Input.GetAxisRaw("Vertical")
             };
 
-            run = Input.GetButton("Fire3");
+            // run = Input.GetButton("Fire3");
 
             jump = Input.GetButton("Jump");
 
@@ -280,6 +280,9 @@ namespace ECM.Controllers
                 cameraTransform = cam.transform;
                 mouseLook.Init(transform, cameraTransform);
             }
+
+            GameManager.OnGamePaused += () => pause = true;
+            GameManager.OnGameResumed += () => pause = false;
         }
 
         public virtual void LateUpdate()
