@@ -705,7 +705,7 @@ MonoBehaviour:
   dashSpeed: 10
   dashSpeedRampUpDuration: 0.2
   dashDuration: 0.4
-  dashKey: 113
+  dashKey: 304
   baseForwardSpeed: 4
 --- !u!114 &1426236942
 MonoBehaviour:
