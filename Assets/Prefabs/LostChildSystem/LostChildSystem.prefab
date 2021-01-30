@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2821701329224818129}
   - component: {fileID: 2821701329224818128}
+  - component: {fileID: 731716141}
   m_Layer: 0
   m_Name: LostChildSystem
   m_TagString: Untagged
@@ -45,3 +46,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children: []
   lostChild: {fileID: 0}
+--- !u!114 &731716141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821701329224818130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39e0c3b212052847a763e493a54cfef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: c4e267409bc08db42a47ba04965c9664, type: 2}
+  - {fileID: 2100000, guid: cd9bd6ed4c0e47d45abfc6191f73c4de, type: 2}
+  - {fileID: 2100000, guid: 20e1da545e587654daa4b8b569dff365, type: 2}
+  - {fileID: 2100000, guid: ef51d944ed8c54946a2670a0a2ae313c, type: 2}
+  - {fileID: 2100000, guid: 867599598b4e34d43a0a7030c3e4fe1b, type: 2}
+  - {fileID: 2100000, guid: 5cc06e89bb56602459a4f328d90303ec, type: 2}
+  - {fileID: 2100000, guid: cbfe898eb047f8942ad66482c28b81d0, type: 2}
+  hats:
+  - Hat_Apple
+  - Hat_Bird
+  - Hat_Hair1
+  - Hat_Hair2
+  - Hat_Pirate
+  - Hat_Propeller
+  - Hat_TopHat
+  percentageOfUniqueKids: 60
