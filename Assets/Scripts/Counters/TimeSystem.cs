@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class TimeSystem : MonoBehaviour
 {
@@ -8,9 +9,14 @@ public class TimeSystem : MonoBehaviour
     public static event Action<float> OnTimeChanged = delegate { };
     public static event Action OnTimeStarted = delegate { };
     public static event Action OnTimeEnded = delegate { };
-    
+
+    public AudioSource mainMusic;
+
     [SerializeField]
     private float time = 10;
+    [SerializeField]
+    private AudioSource countdown;
+
 
     private float timer;
     private bool startedTime = false;
@@ -19,6 +25,8 @@ public class TimeSystem : MonoBehaviour
     
     private int minutes = 0;
     private int seconds = 0;
+
+    private bool countdownStarted = false;
     
     
     private void Awake()
@@ -63,8 +71,20 @@ public class TimeSystem : MonoBehaviour
     {
         minutes = Mathf.FloorToInt((timer < 0 ? 0 : timer) / 60);
         seconds = Mathf.FloorToInt((timer < 0 ? 0 : timer) % 60);
-            
+        
+        if(!countdownStarted && seconds > 25 && seconds < 30)
+        {
+            StartCountDown();
+        }
+
         OnReadableTimeChanged.Invoke(string.Format("{0:00}:{1:00}", minutes, seconds));
+    }
+
+    void StartCountDown()
+    {
+        countdownStarted = true;
+        mainMusic.DOFade(0, 0.5f);
+        countdown.Play(0);
     }
 
     private void StartTime()
