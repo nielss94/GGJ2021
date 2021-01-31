@@ -32,7 +32,7 @@ public class TimeSystem : MonoBehaviour
             Destroy(gameObject);
         }
         
-        GameManager.OnGameStarted += StartTime;
+        IntroDialog.OnIntroComplete += StartTime;
     }
 
     void Update()
@@ -44,7 +44,7 @@ public class TimeSystem : MonoBehaviour
             
             SendReadableTime();
         }
-        else
+        else if (startedTime)
         {
             timer = 0;
             startedTime = false;

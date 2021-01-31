@@ -9,6 +9,7 @@ public class AudioSystem : MonoBehaviour
 {
     public AudioMixer audioMixer;
 
+    public bool fadeInAtStart = true;
     private AudioSource audioSource;
 
     private void Awake()
@@ -19,7 +20,10 @@ public class AudioSystem : MonoBehaviour
     private void Start()
     {
         LoadAudioPreferences();
-        audioSource.DOFade(1, 2);
+        if (fadeInAtStart)
+        {
+            audioSource.DOFade(1, 2);
+        }
     }
 
     private void LoadAudioPreferences()
