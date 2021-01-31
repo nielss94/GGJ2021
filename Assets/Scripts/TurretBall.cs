@@ -8,7 +8,10 @@ public class TurretBall : MonoBehaviour {
 
     private void OnCollisionEnter(Collision other) {
         if (other.transform.TryGetComponent<PlayerStun>(out var player)) {
-            if (canStun) StartCoroutine(player.Stun());
+            if (canStun)
+            {
+                player.Stun();
+            }
         }
     }
 }

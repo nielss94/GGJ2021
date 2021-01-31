@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lockCursor: 1
-  _unlockCursorKey: 27
+  _unlockCursorKey: 0
   _lateralSensitivity: 2
   _verticalSensitivity: 2
   _smooth: 0
@@ -421,8 +421,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stunPivot: {fileID: 54272990}
-  stunDuration: 1
+  stunDuration: 1.5
   stunRotationSpeed: 150
+  coolDownTime: 2.25
 --- !u!114 &1426236946
 MonoBehaviour:
   m_ObjectHideFlags: 0

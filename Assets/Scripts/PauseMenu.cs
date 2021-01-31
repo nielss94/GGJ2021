@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using ECM.Components;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private MouseLook mouseLook;
+
+    private void Awake()
     {
+        mouseLook = FindObjectOfType<MouseLook>();
         
+        GameManager.OnGamePaused += GameManagerOnOnGamePaused;
+        GameManager.OnGameResumed += GameManagerOnOnGameResumed;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GameManagerOnOnGameResumed()
     {
-        
+        mouseLook.SetCursorLock(true);
+    }
+
+    private void GameManagerOnOnGamePaused()
+    {        
+        mouseLook.SetCursorLock(false);
     }
 }

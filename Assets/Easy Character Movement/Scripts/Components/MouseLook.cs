@@ -175,6 +175,11 @@ namespace ECM.Components
 
         public virtual void LookRotation(CharacterMovement movement, Transform cameraTransform)
         {
+            if (!lockCursor)
+            {
+                return;
+            }
+            
             var yaw = Input.GetAxis("Mouse X") * lateralSensitivity;
             var pitch = Input.GetAxis("Mouse Y") * verticalSensitivity;
 

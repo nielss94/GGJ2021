@@ -11338,6 +11338,16 @@ PrefabInstance:
       propertyPath: m_RenderingPath
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6550821928642786089, guid: 8e26c9c775814ba499f8107b0629d6a9,
+        type: 3}
+      propertyPath: coolDownTime
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550821928642786089, guid: 8e26c9c775814ba499f8107b0629d6a9,
+        type: 3}
+      propertyPath: stunDuration
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8478559480994630881, guid: 8e26c9c775814ba499f8107b0629d6a9,
         type: 3}
       propertyPath: m_RootOrder
@@ -11701,7 +11711,7 @@ PrefabInstance:
     - target: {fileID: 9037344100506769397, guid: 3b19a1b64d4064c62a831c5c25dae18d,
         type: 3}
       propertyPath: time
-      value: 50
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b19a1b64d4064c62a831c5c25dae18d, type: 3}
@@ -11724,9 +11734,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 988925389546249779, guid: 36bb1a75fc131b040892ce308d265fc2,
         type: 3}
+      propertyPath: settings
+      value: 
+      objectReference: {fileID: 2021013987}
+    - target: {fileID: 988925389546249779, guid: 36bb1a75fc131b040892ce308d265fc2,
+        type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 2021013986}
+    - target: {fileID: 988925389546249779, guid: 36bb1a75fc131b040892ce308d265fc2,
+        type: 3}
+      propertyPath: pauseContainer
+      value: 
+      objectReference: {fileID: 2021013988}
     - target: {fileID: 988925389546249780, guid: 36bb1a75fc131b040892ce308d265fc2,
         type: 3}
       propertyPath: m_RootOrder
@@ -33586,6 +33606,18 @@ PrefabInstance:
 --- !u!224 &2021013986 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4746009918431856836, guid: e3550e8b3b5d98c45a5fb025e6746c71,
+    type: 3}
+  m_PrefabInstance: {fileID: 2021013985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2021013987 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8117671169491502624, guid: e3550e8b3b5d98c45a5fb025e6746c71,
+    type: 3}
+  m_PrefabInstance: {fileID: 2021013985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2021013988 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4746009919565449092, guid: e3550e8b3b5d98c45a5fb025e6746c71,
     type: 3}
   m_PrefabInstance: {fileID: 2021013985}
   m_PrefabAsset: {fileID: 0}

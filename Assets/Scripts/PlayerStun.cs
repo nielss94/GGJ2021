@@ -10,11 +10,13 @@ public class PlayerStun : MonoBehaviour
     public static event Action<bool> OnSetStunned = delegate {  };
     
     public GameObject stunPivot;
-    public int stunDuration = 1;
+    public float stunDuration = 1f;
     public float stunRotationSpeed = 100f;
+    public float coolDownTime = 2f;
     
     private Vector3 initialStunPivotPos;
     private bool isStunned = false;
+    private bool isCooldown = false;
 
     private void Start() {
         initialStunPivotPos = stunPivot.transform.localPosition;
@@ -25,8 +27,29 @@ public class PlayerStun : MonoBehaviour
             stunPivot.transform.Rotate(new Vector3(0, -1, 0) * (stunRotationSpeed * Time.deltaTime));
         }
     }
+
+    public IEnumerator CooldownStun()
+    {
+        isCooldown = true;
+        
+        yield return new WaitForSeconds(coolDownTime);
+
+        isCooldown = false;
+    }
     
-    public IEnumerator Stun() {
+    public void Stun() {
+
+        if (isCooldown)
+        {
+            return;
+        }
+
+        StartCoroutine(WaitStun());
+        StartCoroutine(CooldownStun());
+    }
+
+    public IEnumerator WaitStun()
+    {
         isStunned = true;
         OnSetStunned.Invoke(isStunned);
         
