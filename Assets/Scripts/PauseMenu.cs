@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    public List<GameObject> itemsToDisable = new List<GameObject>();
+    
     private MouseLook mouseLook;
 
     private void Awake()
@@ -18,11 +20,21 @@ public class PauseMenu : MonoBehaviour
 
     private void GameManagerOnOnGameResumed()
     {
+        foreach (var disableGameObject in itemsToDisable)
+        {
+            disableGameObject.SetActive(true);
+        }
+
         mouseLook.SetCursorLock(true);
     }
 
     private void GameManagerOnOnGamePaused()
-    {        
+    {
+        foreach (var disableGameObject in itemsToDisable)
+        {
+            disableGameObject.SetActive(false);
+        }
+
         mouseLook.SetCursorLock(false);
     }
 }

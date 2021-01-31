@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause"))
         {
+            Debug.Log("PAUSE");
+            
             if (Time.timeScale == 0)
             {
                 ResumeGame();
