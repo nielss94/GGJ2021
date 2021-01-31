@@ -59,4 +59,11 @@ public class PointAwardUI : MonoBehaviour
             .Append(pointAwardText.DOColor(standardTextColor, showTime))
             .Append(pointAwardText.DOColor(standardTransparentColor, hideTime));
     }
+
+    private void OnDestroy()
+    {
+        PointAwardSystem.OnShort -= OnShort;
+        PointAwardSystem.OnMedium -= OnMedium;
+        PointAwardSystem.OnLong -= OnLong;
+    }
 }

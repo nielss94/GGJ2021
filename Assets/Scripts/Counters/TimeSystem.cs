@@ -73,4 +73,9 @@ public class TimeSystem : MonoBehaviour
         startedTime = true;
         OnTimeStarted.Invoke();
     }
+    
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
 }

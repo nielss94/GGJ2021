@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,5 +17,10 @@ public class EndScoreUI : MonoBehaviour
     private void SetEndScore(int score)
     {
         endScoreText.text = score + "";
+    }
+
+    private void OnDestroy()
+    {
+        PointSystem.OnPointsChanged -= SetEndScore;
     }
 }

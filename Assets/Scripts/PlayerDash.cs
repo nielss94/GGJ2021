@@ -34,7 +34,12 @@ public class PlayerDash : MonoBehaviour
         baseFirstPersonController = GetComponent<BaseFirstPersonController>();
         baseForwardSpeed = baseFirstPersonController.forwardSpeed;
 
-        BaseCharacterController.OnSetCrouch += b => isCrouching = b;
+        BaseCharacterController.OnSetCrouch += Crouch;
+    }
+
+    private void Crouch(bool b)
+    {
+        isCrouching = b;
     }
 
     private void OnValidate()
@@ -102,5 +107,10 @@ public class PlayerDash : MonoBehaviour
     {
         return DOTween.To(() => baseFirstPersonController.forwardSpeed, x => baseFirstPersonController.forwardSpeed = x,
             dashSpeed, dashSpeedRampUpDuration);
-    } 
+    }
+
+    private void OnDestroy()
+    {
+        BaseCharacterController.OnSetCrouch -= Crouch;
+    }
 }

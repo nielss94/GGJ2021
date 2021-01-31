@@ -47,4 +47,11 @@ public class DashUI : MonoBehaviour
             .Append(speedLines.DOFade(.3f, .3f))
             .Append(speedLines.transform.DOScale(Vector3.one * 2.8f, 1f));
     }
+
+    private void OnDestroy()
+    {
+        PlayerDash.OnDash -= DoDashAnimation;
+        PlayerDash.OnStopDash -= StopDashAnimation;
+        PlayerDash.OnDashTimerChanged -= ChangeDashBar;
+    }
 }

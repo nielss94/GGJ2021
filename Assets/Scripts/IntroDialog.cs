@@ -53,4 +53,9 @@ public class IntroDialog : MonoBehaviour
         mainAudioSource.DOFade(1f, .5f);
         OnIntroComplete?.Invoke();
     }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStarted -= ShowDialog;
+    }
 }
