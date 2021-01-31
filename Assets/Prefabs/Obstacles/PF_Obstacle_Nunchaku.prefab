@@ -28,7 +28,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.58, z: 0}
   m_Axis: {x: 1, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 2.03, z: 0}
+  m_ConnectedAnchor: {x: 0.33919942, y: 3.1323085, z: 0.17509991}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -52,6 +52,27 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5222211391497434264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253614871912087883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 4d4318bf522e0274faf44ae307a063e2, type: 2}
+  - {fileID: 2100000, guid: c2f2d2325f91fc54f83b761bc1e4a684, type: 2}
+  - {fileID: 2100000, guid: d9cce1881536ca049a58788065323650, type: 2}
+  - {fileID: 2100000, guid: 6c6de97ea13dd2847828971ccbd87ab5, type: 2}
+  - {fileID: 2100000, guid: bf1ea8652223b884fb955349c579e7a7, type: 2}
+  - {fileID: 2100000, guid: 49dde6b66c116e14880a7f641f2e7ef9, type: 2}
+  - {fileID: 2100000, guid: 0a9ec49a5dbb6a841b8c71b74af93867, type: 2}
+  - {fileID: 2100000, guid: c2ffbd0f12dd97b41a5838a2f9b0ab77, type: 2}
 --- !u!54 &2136067161487495735
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80,7 +101,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.58, z: 0}
   m_Axis: {x: 1, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.029999971, z: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.03000009, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -104,6 +125,27 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1321939808076565886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253614872703026891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 4d4318bf522e0274faf44ae307a063e2, type: 2}
+  - {fileID: 2100000, guid: c2f2d2325f91fc54f83b761bc1e4a684, type: 2}
+  - {fileID: 2100000, guid: d9cce1881536ca049a58788065323650, type: 2}
+  - {fileID: 2100000, guid: 6c6de97ea13dd2847828971ccbd87ab5, type: 2}
+  - {fileID: 2100000, guid: bf1ea8652223b884fb955349c579e7a7, type: 2}
+  - {fileID: 2100000, guid: 49dde6b66c116e14880a7f641f2e7ef9, type: 2}
+  - {fileID: 2100000, guid: 0a9ec49a5dbb6a841b8c71b74af93867, type: 2}
+  - {fileID: 2100000, guid: c2ffbd0f12dd97b41a5838a2f9b0ab77, type: 2}
 --- !u!54 &2136067161278461685
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -132,7 +174,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.58, z: 0}
   m_Axis: {x: 1, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -1.0223086, z: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.029999971, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -156,6 +198,27 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &983180820776816382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253614873012441387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 4d4318bf522e0274faf44ae307a063e2, type: 2}
+  - {fileID: 2100000, guid: c2f2d2325f91fc54f83b761bc1e4a684, type: 2}
+  - {fileID: 2100000, guid: d9cce1881536ca049a58788065323650, type: 2}
+  - {fileID: 2100000, guid: 6c6de97ea13dd2847828971ccbd87ab5, type: 2}
+  - {fileID: 2100000, guid: bf1ea8652223b884fb955349c579e7a7, type: 2}
+  - {fileID: 2100000, guid: 49dde6b66c116e14880a7f641f2e7ef9, type: 2}
+  - {fileID: 2100000, guid: 0a9ec49a5dbb6a841b8c71b74af93867, type: 2}
+  - {fileID: 2100000, guid: c2ffbd0f12dd97b41a5838a2f9b0ab77, type: 2}
 --- !u!1 &2136067162005584862
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136067162005584863}
   m_Layer: 0
-  m_Name: SM_Obstacle_Nunchaku
+  m_Name: PF_Obstacle_Nunchaku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
