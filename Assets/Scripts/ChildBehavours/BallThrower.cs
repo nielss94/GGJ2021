@@ -32,7 +32,6 @@ public class BallThrower : MonoBehaviour {
     private void StartNavigation() {
         if (NavTargets.Length == 0) {
             navTargetManager = NavTargetManager.Instance;
-            Debug.Log(navTargetManager.GetAllNavTargets());
             NavTargets = navTargetManager.GetAllNavTargets();
         }
         isNavigating = true;
