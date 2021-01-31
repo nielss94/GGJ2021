@@ -7,50 +7,49 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown dropdown = null;
-    private string selectedScene;
+    public GameObject settingsMenu;
+    public GameObject mainMenu;
+    public GameObject creditMenu;
 
-    private void Awake()
+    private void Start()
     {
-        SetDropDownScenes();
-    }
-
-    public void StartSmallGame()
-    {
-        SceneManager.LoadScene(selectedScene != "" ? selectedScene : "Game");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     
-    public void StartMediumGame()
+    public void StartGame()
     {
-        SceneManager.LoadScene(selectedScene != "" ? selectedScene : "Game");
+        SceneManager.LoadScene("Game");
     }
-    
-    public void StartLargeGame()
-    {
-        SceneManager.LoadScene(selectedScene != "" ? selectedScene : "Game");
-    }
-    
-    private void SetDropDownScenes()
-    {
-        dropdown.ClearOptions();
 
-        List<TMP_Dropdown.OptionData> optionDataList = new List<TMP_Dropdown.OptionData>();
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void ShowSettings()
+    {
+        settingsMenu.SetActive(true);
         
-        optionDataList.Add(new TMP_Dropdown.OptionData("Select-Level"));
-        
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
-        {
-            string name = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
-            if (name != "Menu")
-            {
-                optionDataList.Add(new TMP_Dropdown.OptionData(name));
-            } 
-        }
- 
-        dropdown.AddOptions(optionDataList);
+        mainMenu.SetActive(false);
+        creditMenu.SetActive(false);
     }
-    
-    public void SelectScene(){
-        selectedScene = dropdown.options[dropdown.value].text;
+
+    public void ShowCredits()
+    {
+        
+        creditMenu.SetActive(true);
+        
+        mainMenu.SetActive(false);
+        settingsMenu.SetActive(false);
+    }
+
+    public void ShowMainMenu()
+    {
+        
+        mainMenu.SetActive(true);
+        
+        creditMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
 }
