@@ -7,7 +7,6 @@ using Random = UnityEngine.Random;
 
 public class Turret : MonoBehaviour {
 
-    public int stunDuration = 1;
     public int shootInterval = 3;
     public float ballSpeed = 5;
     [Range(1, 10)]
@@ -16,18 +15,25 @@ public class Turret : MonoBehaviour {
     public int despawnTime = 5;
     public GameObject turretBall;
     public Transform ballSpawnPoint;
+    public bool shooting = false;
 
-    private bool active = false;
-    private void Start() {
-        active = true;
+    private void OnEnable() {
         StartCoroutine(ShootRoutine());
     }
 
     private IEnumerator ShootRoutine() {
-        while (active) {
+        if (shooting) yield break;
+
+        shooting = true;
+        while (shooting) {
+            if (TryGetComponent<Animator>(out var animator)) {
+                animator.SetTrigger("throw");
+                yield return new WaitForSeconds(0.5f);
+            }
             Shoot();
             yield return new WaitForSeconds(shootInterval);
         }
+        shooting = false;
     }
 
     private void Shoot() {
