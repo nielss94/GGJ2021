@@ -14,9 +14,8 @@ public class GameManager : MonoBehaviour
     public static event Action OnGameResumed = delegate { };
     public static event Action OnGameEnded = delegate { };
 
-    [SerializeField] private RectTransform pauseMenu;
-
-    [SerializeField] private KeyCode pauseKey;
+    [SerializeField] private RectTransform pauseContainer;
+    [SerializeField] private RectTransform settings;
 
     private void Start()
     {
@@ -25,15 +24,23 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(pauseKey))
+        if (Input.GetButtonDown("Pause"))
         {
-            PauseGame();
+            if (Time.timeScale == 0)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();    
+            }
         }
     }
     
     public void ResumeGame()
     {
-        pauseMenu.gameObject.SetActive(false);
+        pauseContainer.gameObject.SetActive(false);
+        settings.gameObject.SetActive(false);
         Time.timeScale = 1;
         OnGameResumed?.Invoke();
     }
@@ -47,7 +54,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-
+    
+    public void Settings()
+    {
+        settings.gameObject.SetActive(true);
+        pauseContainer.gameObject.SetActive(false);
+    }
+    
     private void StartGame()
     {
         OnGameStarted?.Invoke();
@@ -55,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     private void PauseGame()
     {
-        pauseMenu.gameObject.SetActive(true);
+        pauseContainer.gameObject.SetActive(true);
         Time.timeScale = 0;
         OnGamePaused?.Invoke();
     }
