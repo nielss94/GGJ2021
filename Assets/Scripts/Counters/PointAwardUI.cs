@@ -35,21 +35,21 @@ public class PointAwardUI : MonoBehaviour
         pointAwardText.color = standardTransparentColor;
     }
 
-    private void OnShort()
+    private void OnShort(int points)
     {
-        pointAwardText.text = shortText;
+        pointAwardText.text = shortText + " +" + points;
         FlashAward();
     }
     
-    private void OnMedium()
+    private void OnMedium(int points)
     {
-        pointAwardText.text = mediumText;
+        pointAwardText.text = mediumText + " +" + points;
         FlashAward();
     }
     
-    private void OnLong()
+    private void OnLong(int points)
     {
-        pointAwardText.text = longText;
+        pointAwardText.text = longText + " +" + points;
         FlashAward();
     }
 
