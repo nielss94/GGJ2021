@@ -13,9 +13,9 @@ public class PointAwardSystem : MonoBehaviour
     [SerializeField] private float shortTime = 15;
     [SerializeField] private float mediumTime = 30;
     
-    public static event Action OnShort = delegate { };
-    public static event Action OnMedium = delegate { };
-    public static event Action OnLong = delegate { };
+    public static event Action<int> OnShort = delegate { };
+    public static event Action<int> OnMedium = delegate { };
+    public static event Action<int> OnLong = delegate { };
     
     [SerializeField]
     private int shortPoints = 10;
@@ -78,17 +78,17 @@ public class PointAwardSystem : MonoBehaviour
         if (timeItTook <= shortTime)
         {
             extraPoints = shortPoints;
-            OnShort.Invoke();
+            OnShort.Invoke(standardPoints + extraPoints);
         }
         else if(timeItTook <= mediumTime)
         {
             extraPoints = mediumPoints;
-            OnMedium.Invoke();
+            OnMedium.Invoke(standardPoints + extraPoints);
         }
         else
         {
             extraPoints = longPoints;
-            OnLong.Invoke();
+            OnLong.Invoke(standardPoints);
         }
         
         pointSystem.AddPoints(standardPoints + extraPoints);
