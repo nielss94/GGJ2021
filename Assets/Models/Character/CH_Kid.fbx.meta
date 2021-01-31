@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Run
+    second: Fetus
   - first:
       74: -998496362607748373
     second: Idle
@@ -18,6 +18,12 @@ ModelImporter:
   - first:
       74: 4072026390935896237
     second: Floundering
+  - first:
+      74: 7666019288946695810
+    second: Stun
+  - first:
+      74: 5735413055835740234
+    second: MidAir
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -62,11 +68,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Run
+      name: Fetus
       takeName: Take 001
       internalID: 0
-      firstFrame: 50
-      lastFrame: 62
+      firstFrame: 150
+      lastFrame: 170
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -89,7 +95,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+      additiveReferencePoseFrame: 10
     - serializedVersion: 16
       name: Idle
       takeName: Take 001
@@ -183,6 +189,64 @@ ModelImporter:
       internalID: 0
       firstFrame: 130
       lastFrame: 139
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 10
+    - serializedVersion: 16
+      name: Stun
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 180
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 10
+    - serializedVersion: 16
+      name: MidAir
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 250
+      lastFrame: 260
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
