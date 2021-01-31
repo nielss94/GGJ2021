@@ -89,7 +89,6 @@ public class LostChildSystem : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("asdasd");
         GameManager.OnGameStarted -= Orchestrate;
         Instance = null;
     }
