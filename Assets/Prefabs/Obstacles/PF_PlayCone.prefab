@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 7760505879417986653}
   - component: {fileID: 6023452989759796433}
   - component: {fileID: 8967598536471000073}
+  - component: {fileID: -1131928975952256593}
+  - component: {fileID: -1965346460618712770}
   m_Layer: 0
-  m_Name: SM_PlayCone
+  m_Name: PF_PlayCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,3 +115,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1131928975952256593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120595455649628040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
+--- !u!114 &-1965346460618712770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120595455649628040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 4d4318bf522e0274faf44ae307a063e2, type: 2}
+  - {fileID: 2100000, guid: c2f2d2325f91fc54f83b761bc1e4a684, type: 2}
+  - {fileID: 2100000, guid: d9cce1881536ca049a58788065323650, type: 2}
+  - {fileID: 2100000, guid: 6c6de97ea13dd2847828971ccbd87ab5, type: 2}
+  - {fileID: 2100000, guid: bf1ea8652223b884fb955349c579e7a7, type: 2}
+  - {fileID: 2100000, guid: 49dde6b66c116e14880a7f641f2e7ef9, type: 2}
+  - {fileID: 2100000, guid: 0a9ec49a5dbb6a841b8c71b74af93867, type: 2}
+  - {fileID: 2100000, guid: c2ffbd0f12dd97b41a5838a2f9b0ab77, type: 2}
