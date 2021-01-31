@@ -526,8 +526,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3596b05fa7bdb7548bbfeec8acfc2177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockdownTime: 1
   canGetKnockedDown: 1
+  hats: {fileID: 0}
+  stunTime: 1
+  renderer: {fileID: 0}
 --- !u!95 &3741868695551629042
 Animator:
   serializedVersion: 3
