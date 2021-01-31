@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dash: {fileID: 8300000, guid: e22b94d692c17b94492eaf279b2b6124, type: 3}
+  dashHit: {fileID: 8300000, guid: 9ef2f2ca6978f5c4497b4428d44671d0, type: 3}
 --- !u!1 &8478559482116802587
 GameObject:
   m_ObjectHideFlags: 0
