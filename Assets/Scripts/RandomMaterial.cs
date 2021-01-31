@@ -16,9 +16,14 @@ public class RandomMaterial : MonoBehaviour
         renderer = GetComponent<Renderer>();
     }
 
-    private void Start()
+    private void OnValidate()
     {
-        ApplyRandomMaterial();
+        renderer = GetComponent<Renderer>();
+    }
+
+    public void Apply(Material material)
+    {
+        renderer.material = material;
     }
 
     private void ApplyRandomMaterial()
