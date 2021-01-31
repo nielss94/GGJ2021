@@ -24,12 +24,12 @@ public class PlayerInteraction : MonoBehaviour
     private Ray ray;
     private void Update()
     {
-        if (interactingChild && Input.GetKeyDown(interactButton))
+        if (interactingChild && Input.GetButtonDown("Interact"))
         {
             InteractWithChild(interactingChild);
         }
         
-        if (canDeliver && Input.GetKeyDown(interactButton))
+        if (canDeliver && Input.GetButtonDown("Interact"))
         {
             if (LostChildSystem.Instance.DeliverChild(takenChild))
             {
