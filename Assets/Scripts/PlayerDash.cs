@@ -55,7 +55,7 @@ public class PlayerDash : MonoBehaviour
             dashTimer = 0;
         }
         
-        if (Input.GetKeyDown(dashKey) && !dashing && dashTimer == 0)
+        if (Input.GetAxisRaw("Dash") > 0 && !dashing && dashTimer == 0)
         {
             Dash();
         }
