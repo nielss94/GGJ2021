@@ -395,6 +395,9 @@ MonoBehaviour:
   dashSpeedRampUpDuration: 0.2
   dashDuration: 0.4
   dashKey: 304
+  dashHitEffectPrefab: {fileID: 1284058680160611867, guid: cf07503f683f44c4f81be70e41d52265,
+    type: 3}
+  dashEffectOffset: {x: 0, y: 1.5, z: 0}
   baseForwardSpeed: 4
 --- !u!114 &1426236942
 MonoBehaviour:
