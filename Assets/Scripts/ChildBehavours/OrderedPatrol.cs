@@ -6,12 +6,15 @@ using UnityEngine.AI;
 
 public class OrderedPatrol : MonoBehaviour
 {
-    private NavTarget[] navTargets;
+    public NavTarget[] NavTargets;
+    public float WaitTime = 0f;
+    
     private NavTargetManager navTargetManager;
     private int destIndex;
     private NavMeshAgent agent;
     private ChildNavAgent childNavAgent;
     private bool isNavigating = false;
+    private bool isWaiting = false;
     
     void Start() {
         agent = GetComponent<NavMeshAgent>();
@@ -21,11 +24,12 @@ public class OrderedPatrol : MonoBehaviour
     }
 
     private void StartNavigation() {
-        navTargetManager = NavTargetManager.Instance;
-        navTargets = navTargetManager.GetAllNavTargets();
+        if (NavTargets.Length == 0) {
+            navTargetManager = NavTargetManager.Instance;
+            NavTargets = navTargetManager.GetAllNavTargets();
+        }
         isNavigating = true;
-        
-        GoToNextPoint();
+        StartCoroutine(GoToNextPoint());
     }
 
     private void StopNavigation() {
@@ -34,20 +38,27 @@ public class OrderedPatrol : MonoBehaviour
     } 
 
     private void Update() {
-        if (isNavigating &&
+        
+        if (!isWaiting &&
+            isNavigating &&
             agent.enabled &&
             !agent.pathPending &&
             agent.remainingDistance < 0.5f) {
-            GoToNextPoint();
+            StartCoroutine(GoToNextPoint());
         }
     }
 
-    private void GoToNextPoint() {
-        if (navTargets.Length == 0)
-            return;
+    private IEnumerator GoToNextPoint() {
+        isWaiting = true;
+        yield return new WaitForSeconds(WaitTime);
+        if (NavTargets.Length == 0) {
+            isWaiting = false;
+            yield break;
+        }
 
-        agent.destination = navTargets[destIndex].transform.position;
-        destIndex = (destIndex + 1) % navTargets.Length;
+        agent.destination = NavTargets[destIndex].transform.position;
+        destIndex = (destIndex + 1) % NavTargets.Length;
+        isWaiting = false;
     }
 
     private void OnDestroy() {

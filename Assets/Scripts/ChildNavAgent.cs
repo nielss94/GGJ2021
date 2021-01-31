@@ -14,6 +14,7 @@ public class ChildNavAgent : MonoBehaviour {
     private void Start() {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        OnStartNavigation.Invoke();
     }
     
     private void Update() {

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NavTargetManager : MonoBehaviour {
 
-    public NavTarget[] NavTargets;
+    private NavTarget[] NavTargets;
     public static NavTargetManager Instance { get; private set; }
 
     private void Awake() {
@@ -14,9 +14,7 @@ public class NavTargetManager : MonoBehaviour {
         } else {
             Instance = this;
         }
-    }
-
-    private void Start() {
+        
         GatherAllNavTargets();
     }
 
