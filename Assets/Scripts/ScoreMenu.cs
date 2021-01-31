@@ -19,6 +19,6 @@ public class ScoreMenu : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene("Game 1");
+        SceneManager.LoadScene("Game");
     }
 }
