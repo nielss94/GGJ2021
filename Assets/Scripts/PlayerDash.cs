@@ -6,6 +6,7 @@ using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
 using ECM.Controllers;
 using UnityEngine;
+using UnityEngine.SearchService;
 
 public class PlayerDash : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerDash : MonoBehaviour
     public float dashSpeedRampUpDuration;
     public float dashDuration;
     public KeyCode dashKey;
+    public GameObject dashHitEffectPrefab;
+    public Vector3 dashEffectOffset;
     [ReadOnly] public float baseForwardSpeed; 
     
     private BaseFirstPersonController baseFirstPersonController;
@@ -65,8 +68,9 @@ public class PlayerDash : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Child child) && dashing)
         {
-            if (child.canGetKnockedDown)
-            {
+            if (child.canGetKnockedDown) {
+                Vector3 effectPos = other.transform.position + dashEffectOffset;
+                Instantiate(dashHitEffectPrefab, effectPos, Quaternion.identity);
                 Vector3 normalizedAngle = (child.transform.position - transform.position) + Vector3.up + transform.TransformDirection(Vector3.forward).normalized;
                 child.KnockBack(normalizedAngle.normalized, dashKnockbackForce);
             }
