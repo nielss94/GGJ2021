@@ -10,6 +10,12 @@ public class MainMenu : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject mainMenu;
     public GameObject creditMenu;
+
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     
     public void StartGame()
     {
