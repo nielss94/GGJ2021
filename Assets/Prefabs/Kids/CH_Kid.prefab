@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 800927471}
   - component: {fileID: 800927470}
   - component: {fileID: 800927469}
+  - component: {fileID: 7308446477199609277}
+  - component: {fileID: 62575322364926927}
   m_Layer: 6
   m_Name: CH_Kid
   m_TagString: Untagged
@@ -48,7 +50,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f3aaacf4fceecec41ad6b4a455763b21, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -62,7 +64,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254043338874449331}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 1
   m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -98,7 +100,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canGetKnockedDown: 1
   hats: {fileID: 1426709174920544700}
+  stunTime: 2
   renderer: {fileID: 4881981403526563810}
+--- !u!114 &7308446477199609277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254043338874449331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008aac3580e567547af40ec67e70200c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navTargets: []
+--- !u!195 &62575322364926927
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254043338874449331}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &543999518263965458
 GameObject:
   m_ObjectHideFlags: 0
