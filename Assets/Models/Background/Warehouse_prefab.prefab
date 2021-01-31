@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7218020374824375565}
   - component: {fileID: 1124353877749026701}
   - component: {fileID: 3889377943270828846}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8761936351002325547}
   - component: {fileID: 7696998907883405131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 7923448244771740281}
   - component: {fileID: 8657406556462571139}
   - component: {fileID: 9167299472215993423}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RimWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 3007768945294499172}
   - component: {fileID: 3347567788648034734}
   - component: {fileID: 8536842086006956115}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 6842229906223541916}
   - component: {fileID: 6388823279473247739}
   - component: {fileID: 2623443156323531641}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 6546245296052499422}
   - component: {fileID: 7005375792008050827}
   - component: {fileID: 3277681946734486831}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 7197090730634112600}
   - component: {fileID: 8715034204106694838}
   - component: {fileID: 6898656853293336410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187091955735342398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6893769604789419414}
   - component: {fileID: 4224386392540935029}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935010132400430075}
   - component: {fileID: 7183906936038579721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 6299495627144827377}
   - component: {fileID: 3054603985054043905}
   - component: {fileID: 5158301444961657167}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 8120852932973903416}
   - component: {fileID: 1003178458577893289}
   - component: {fileID: 3800508974140055746}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lightbeams
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 5967018080034299530}
   - component: {fileID: 6829843633149283186}
   - component: {fileID: 282636851257494798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 2038861963828835317}
   - component: {fileID: 8425237250889187658}
   - component: {fileID: 1060348110500165564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LowWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1237,7 +1237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6777705753180324685}
   - component: {fileID: 8428727665714687958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1332,7 +1332,7 @@ GameObject:
   - component: {fileID: 4743024382769179237}
   - component: {fileID: 9045000441015886336}
   - component: {fileID: 6763067746321145236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770103489453270979}
   - component: {fileID: 4586341530062081162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 4991150442278533144}
   - component: {fileID: 7612543256731052760}
   - component: {fileID: 3033333632107460350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8016795529937094997}
   - component: {fileID: 6216131089921213820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,7 +1709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4590016556744736453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Warehouse_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,7 +1748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8748492133401760601}
   - component: {fileID: 3873946565992098478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1841,7 +1841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7255719146462810417}
   - component: {fileID: 8892840538506641372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1934,7 +1934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3997900940409044479}
   - component: {fileID: 5363820452001344111}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2028,7 +2028,7 @@ GameObject:
   - component: {fileID: 5246071758209964542}
   - component: {fileID: 2973369307205905951}
   - component: {fileID: 7031901151410358287}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Beams
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2110,7 +2110,7 @@ GameObject:
   - component: {fileID: 9070006433064482496}
   - component: {fileID: 6910384070208364081}
   - component: {fileID: 8251776808897494319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,7 +2207,7 @@ GameObject:
   - component: {fileID: 6303976375848234196}
   - component: {fileID: 3002829436037872488}
   - component: {fileID: 6241376275037524332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 137442840479138858}
   - component: {fileID: 3375515063269001177}
   - component: {fileID: 2005979078085731155}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2400,7 +2400,7 @@ GameObject:
   - component: {fileID: 7443660035041509797}
   - component: {fileID: 1551750364149052026}
   - component: {fileID: 329052338235356791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2480,7 +2480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3894471567007252458}
   - component: {fileID: 6737747988972569010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2573,7 +2573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3860860455085570209}
   - component: {fileID: 2669458185569649997}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2668,7 +2668,7 @@ GameObject:
   - component: {fileID: 2351431087471236764}
   - component: {fileID: 5008880602262592230}
   - component: {fileID: 3713998975207508728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoofLight (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2764,8 +2764,12 @@ GameObject:
   - component: {fileID: 5534910856130926764}
   - component: {fileID: 6494084710019911824}
   - component: {fileID: 5319908895774837530}
-  - component: {fileID: 4926351353437597375}
-  m_Layer: 0
+  - component: {fileID: 1821248440}
+  - component: {fileID: 1821248441}
+  - component: {fileID: 1821248442}
+  - component: {fileID: 1821248443}
+  - component: {fileID: 1821248444}
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2835,8 +2839,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4926351353437597375
-MeshCollider:
+--- !u!65 &1821248440
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2845,10 +2849,61 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.1988341, y: 0.01, z: 1.5349547}
+  m_Center: {x: -0.39201763, y: -0.19, z: 0.1920418}
+--- !u!65 &1821248441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525555379484189442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.011558, y: 0.01, z: 4.421866}
+  m_Center: {x: 0.0041396185, y: -1.20603465e-14, z: -2.7853732}
+--- !u!65 &1821248442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525555379484189442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0450735, y: 0.01, z: 9.992615}
+  m_Center: {x: -2.9790998, y: -2.8820892e-20, z: -0.0000025697095}
+--- !u!65 &1821248443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525555379484189442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.00139, y: 0.01, z: 4.0487075}
+  m_Center: {x: 0.009225992, y: -1.0472776e-14, z: 2.971947}
+--- !u!65 &1821248444
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525555379484189442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.821333, y: 0.01, z: 9.992615}
+  m_Center: {x: 2.5992582, y: 3.048167e-21, z: -0.000002386159}
 --- !u!1 &8649549527766447645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1570843362907567804}
   - component: {fileID: 8152266639768871223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

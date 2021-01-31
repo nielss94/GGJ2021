@@ -25,4 +25,9 @@ public class NavTargetManager : MonoBehaviour {
     private void GatherAllNavTargets() {
         NavTargets = FindObjectsOfType<NavTarget>();
     }
+    
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
 }

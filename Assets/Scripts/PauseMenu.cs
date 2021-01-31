@@ -46,4 +46,10 @@ public class PauseMenu : MonoBehaviour
         settingsMenu.SetActive(true);
         pauseMenu.SetActive(false);
     }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGamePaused -= GameManagerOnOnGamePaused;
+        GameManager.OnGameResumed -= GameManagerOnOnGameResumed;
+    }
 }

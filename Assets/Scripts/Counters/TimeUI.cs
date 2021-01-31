@@ -17,4 +17,9 @@ public class TimeUI : MonoBehaviour
     {
         timerText.text = time;
     }
+
+    private void OnDestroy()
+    {
+        TimeSystem.OnReadableTimeChanged -= ChangeTimeText;
+    }
 }
