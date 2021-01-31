@@ -1313,7 +1313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008aac3580e567547af40ec67e70200c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navTargets: []
 --- !u!195 &907833649
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1355,7 +1354,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1a992ee9444e4a743bed2a1c66b789d0, type: 3}
   - {fileID: 8300000, guid: b0550831d8e4cd44f8511bd1535bdcc8, type: 3}
   onTakenVoiceLines:
-  - {fileID: 8300000, guid: b0550831d8e4cd44f8511bd1535bdcc8, type: 3}
   - {fileID: 8300000, guid: 4829dda69a4e65c4eb6441901fe0ee29, type: 3}
   - {fileID: 8300000, guid: 1351deafd11758b469073f7c22c34a2f, type: 3}
   - {fileID: 8300000, guid: c7eb757ded1cb0e4092ec4a738c0a628, type: 3}
