@@ -7,6 +7,8 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public List<GameObject> itemsToDisable = new List<GameObject>();
+    public GameObject settingsMenu;
+    public GameObject pauseMenu;
     
     private MouseLook mouseLook;
 
@@ -36,5 +38,12 @@ public class PauseMenu : MonoBehaviour
         }
 
         mouseLook.SetCursorLock(false);
+    }
+    
+    
+    public void ShowSettings()
+    {
+        settingsMenu.SetActive(true);
+        pauseMenu.SetActive(false);
     }
 }
