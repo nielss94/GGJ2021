@@ -12,6 +12,8 @@ public class TurretBall : MonoBehaviour {
             {
                 player.Stun();
             }
+        } else if (other.gameObject.isStatic){
+            canStun = false;
         }
     }
 }
