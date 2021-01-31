@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6726816899280978985}
+  - component: {fileID: 117783272}
   m_Layer: 5
   m_Name: LostChildUI
   m_TagString: Untagged
@@ -38,6 +39,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &117783272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726816899280978982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153d628c6c102b044b60b8ed9c516b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderImage: {fileID: 6726816899520416458}
+  lostChildRenderer: {fileID: 0}
 --- !u!1 &6726816899520416456
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,8 +87,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -85, y: -75}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6726816899520416461
 CanvasRenderer:
@@ -97,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -144,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30, y: 57.5}
+  m_AnchoredPosition: {x: 30, y: -100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8060527533764106484
@@ -203,8 +218,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -295,7 +310,7 @@ PrefabInstance:
     - target: {fileID: -1556976072974029842, guid: ac20d4f503c8446c4a8ac3d828117394,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -1556976072974029842, guid: ac20d4f503c8446c4a8ac3d828117394,
         type: 3}
@@ -360,6 +375,11 @@ PrefabInstance:
     - target: {fileID: -1556976072974029842, guid: ac20d4f503c8446c4a8ac3d828117394,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440099161332397843, guid: ac20d4f503c8446c4a8ac3d828117394,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
