@@ -86,4 +86,11 @@ public class LostChildSystem : MonoBehaviour
     {
         children = FindObjectsOfType<Child>().ToList();
     }
+
+    private void OnDestroy()
+    {
+        Debug.Log("asdasd");
+        GameManager.OnGameStarted -= Orchestrate;
+        Instance = null;
+    }
 }

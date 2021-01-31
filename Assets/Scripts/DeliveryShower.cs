@@ -28,4 +28,10 @@ public class DeliveryShower : MonoBehaviour
             objectiveMarker.FadeOutObjective(true);
         }
     }
+
+    private void OnDestroy()
+    {
+        PlayerInteraction.OnTakeChild -= ShowObjectives;
+        PlayerInteraction.OnDeliverChild -= HideObjectives;
+    }
 }

@@ -19,4 +19,9 @@ public class PlayerSFX : MonoBehaviour
     {
         audioSource.PlayOneShot(dash);
     }
+
+    private void OnDestroy()
+    {
+        PlayerDash.OnDash -= PlayDashSound;
+    }
 }

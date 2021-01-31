@@ -75,4 +75,8 @@ public class GameManager : MonoBehaviour
         OnGamePaused?.Invoke();
     }
 
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
 }

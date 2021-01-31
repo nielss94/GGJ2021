@@ -18,4 +18,9 @@ public class PointUI : MonoBehaviour
     {
         pointText.text = point + "";
     }
+
+    private void OnDestroy()
+    {
+        PointSystem.OnPointsChanged -= ChangePointText;
+    }
 }

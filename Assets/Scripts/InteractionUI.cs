@@ -75,4 +75,12 @@ public class InteractionUI : MonoBehaviour
 
         deliverInteractionText.enabled = true;
     }
+
+    private void OnDestroy()
+    {
+        PlayerInteraction.OnInteraction -= ShowInteraction;
+        PlayerInteraction.OnTakeChild -= ShowTakeChild;
+        PlayerInteraction.OnFailTakeChild -= ShowFailTakeChild;
+        PlayerInteraction.OnDeliverInteraction -= ShowDeliverInteraction;
+    }
 }

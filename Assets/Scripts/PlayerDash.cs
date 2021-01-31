@@ -6,6 +6,7 @@ using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
 using ECM.Controllers;
 using UnityEngine;
+using UnityEngine.SearchService;
 
 public class PlayerDash : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerDash : MonoBehaviour
     public float dashSpeedRampUpDuration;
     public float dashDuration;
     public KeyCode dashKey;
+    public GameObject dashHitEffectPrefab;
+    public Vector3 dashEffectOffset;
     [ReadOnly] public float baseForwardSpeed; 
     
     private BaseFirstPersonController baseFirstPersonController;
@@ -34,7 +37,12 @@ public class PlayerDash : MonoBehaviour
         baseFirstPersonController = GetComponent<BaseFirstPersonController>();
         baseForwardSpeed = baseFirstPersonController.forwardSpeed;
 
-        BaseCharacterController.OnSetCrouch += b => isCrouching = b;
+        BaseCharacterController.OnSetCrouch += Crouch;
+    }
+
+    private void Crouch(bool b)
+    {
+        isCrouching = b;
     }
 
     private void OnValidate()
@@ -65,8 +73,9 @@ public class PlayerDash : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Child child) && dashing)
         {
-            if (child.canGetKnockedDown)
-            {
+            if (child.canGetKnockedDown) {
+                Vector3 effectPos = other.transform.position + dashEffectOffset;
+                Instantiate(dashHitEffectPrefab, effectPos, Quaternion.identity);
                 Vector3 normalizedAngle = (child.transform.position - transform.position) + Vector3.up + transform.TransformDirection(Vector3.forward).normalized;
                 child.KnockBack(normalizedAngle.normalized, dashKnockbackForce);
             }
@@ -102,5 +111,10 @@ public class PlayerDash : MonoBehaviour
     {
         return DOTween.To(() => baseFirstPersonController.forwardSpeed, x => baseFirstPersonController.forwardSpeed = x,
             dashSpeed, dashSpeedRampUpDuration);
-    } 
+    }
+
+    private void OnDestroy()
+    {
+        BaseCharacterController.OnSetCrouch -= Crouch;
+    }
 }

@@ -12,9 +12,36 @@ public class HandAnimator : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        PlayerDash.OnDash += () => animator.SetTrigger("doDash");
-        BaseCharacterController.OnSetCrouch += b => animator.SetBool("isCrouching", b);
-        BaseFirstPersonController.OnSetRunning += b => animator.SetBool("isRunning", b);
-        PlayerStun.OnSetStunned += b => animator.SetBool("isStunned", b);
+        PlayerDash.OnDash += Dash;
+        BaseCharacterController.OnSetCrouch += Crouch;
+        BaseFirstPersonController.OnSetRunning += Run;
+        PlayerStun.OnSetStunned += Stun;
+    }
+
+    private void Dash()
+    {
+        animator.SetTrigger("doDash");
+    }
+    
+    private void Crouch(bool b)
+    {
+        animator.SetBool("isCrouching", b);
+    }
+    private void Run(bool b)
+    {
+        animator.SetBool("isRunning", b);
+    }
+    
+    private void Stun(bool b)
+    {
+        animator.SetBool("isStunned", b);
+    }
+
+    private void OnDestroy()
+    {
+        PlayerDash.OnDash -= Dash;
+        BaseCharacterController.OnSetCrouch -= Crouch;
+        BaseFirstPersonController.OnSetRunning -= Run;
+        PlayerStun.OnSetStunned -= Stun;
     }
 }

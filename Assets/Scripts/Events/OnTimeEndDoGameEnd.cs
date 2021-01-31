@@ -15,4 +15,9 @@ public class OnTimeEndDoGameEnd : MonoBehaviour
     {
         GameManager.EndGame();
     }
+    
+    private void OnDestroy()
+    {
+        TimeSystem.OnTimeEnded -= EndGame;
+    }
 }
