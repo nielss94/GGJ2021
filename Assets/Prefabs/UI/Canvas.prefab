@@ -3697,6 +3697,155 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4390734495132154597}
     m_Modifications:
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[0].text
+      value: Goedemiddag. Ik kom mijn kleinkind ophalen!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[1].text
+      value: Weet jij waar mijn kleinkind is?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[2].text
+      value: Kunt u mij helpen? Ik ben mijn kleinkind kwijt.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[3].text
+      value: Kan jij mijn kind halen? En een beetje opschieten.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[4].text
+      value: Ga mijn kind eens halen! Ik moet schijten! En dat kan ik alleen thuis.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[5].text
+      value: Kan je dat vervelende kind van mij ff halen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[6].text
+      value: Kan je m'n kind ophalen!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[7].text
+      value: Ik ben mijn kind kwijt! Weet jij waar die is?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[8].text
+      value: Mijn kind zit vast. Wil je hem halen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[0].image
+      value: 
+      objectReference: {fileID: 21300000, guid: e4abda71c10e04447b25e546193ac9f8,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[1].image
+      value: 
+      objectReference: {fileID: 21300000, guid: e4abda71c10e04447b25e546193ac9f8,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[2].image
+      value: 
+      objectReference: {fileID: 21300000, guid: e4abda71c10e04447b25e546193ac9f8,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[3].image
+      value: 
+      objectReference: {fileID: 21300000, guid: 764209430fa3c4447a907ceecfb5f140,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[4].image
+      value: 
+      objectReference: {fileID: 21300000, guid: 764209430fa3c4447a907ceecfb5f140,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[5].image
+      value: 
+      objectReference: {fileID: 21300000, guid: 764209430fa3c4447a907ceecfb5f140,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[6].image
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c05773200cb7a446bce0d7d53df9de1,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[7].image
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c05773200cb7a446bce0d7d53df9de1,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[8].image
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c05773200cb7a446bce0d7d53df9de1,
+        type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cf0a22717177df4ea9b178162987f83, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 813f9d440318e794eb424302eae63bdc, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 962b66de485d559499aaf6b5f9bcd416, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[3].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d43779ff17158a44fa75a0a4ad679c48, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[4].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4990437168367fa49acb1f3cd9a374d0, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[5].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7bea9c5323f3e1c4ab9ed292e8fbc540, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[6].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eda190acfa910d4448ab2d825582059f, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[7].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0289172fbe75f8c4bbf025e31873d2a4, type: 3}
+    - target: {fileID: 4502514195185704115, guid: 7e28817f9d7de304c8d6a4402947e75e,
+        type: 3}
+      propertyPath: possibleDialogs.Array.data[8].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 11199cdd0c5e94446b1138cb0d7823d9, type: 3}
     - target: {fileID: 4502514195185704124, guid: 7e28817f9d7de304c8d6a4402947e75e,
         type: 3}
       propertyPath: m_Pivot.x
