@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -91,6 +92,7 @@ public class PlayerInteraction : MonoBehaviour
         else
         {
             OnFailTakeChild?.Invoke();
+            child.GetComponent<ChildAudio>().FailedTaken();
         }
     }
 
@@ -101,10 +103,15 @@ public class PlayerInteraction : MonoBehaviour
         takenChild.GetComponent<Rigidbody>().isKinematic = true;
         takenChild.GetComponent<Collider>().enabled = false;
         takenChild.GetComponent<Animator>().enabled = false;
+        takenChild.GetComponent<NavMeshAgent>().enabled = false;
+        takenChild.GetComponent<ChildNavAgent>().enabled = false;
+        
         takenChild.transform.localPosition = Vector3.zero;
         takenChild.transform.localEulerAngles = Vector3.zero;
         
         OnTakeChild?.Invoke(takenChild);
+        
+        takenChild.GetComponent<ChildAudio>().Taken();
     }
 
 }
