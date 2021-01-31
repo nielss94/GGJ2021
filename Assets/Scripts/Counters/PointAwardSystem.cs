@@ -43,9 +43,10 @@ public class PointAwardSystem : MonoBehaviour
             Destroy(gameObject);
         }
 
-        TimeSystem.OnTimeStarted += () => canAward = true;
-        TimeSystem.OnTimeEnded += () => canAward = false;
+        TimeSystem.OnTimeStarted += SetAwardTrue;
+        TimeSystem.OnTimeEnded += SetAwardFalse;
     }
+    
 
     private void Start()
     {
@@ -54,6 +55,16 @@ public class PointAwardSystem : MonoBehaviour
 
         // Make sure timeSystem has started timer
         StartCoroutine(GetStartTime());
+    }
+
+    private void SetAwardTrue()
+    {
+        canAward = true;
+    }
+    
+    private void SetAwardFalse()
+    {
+        canAward = false;
     }
     
     private IEnumerator GetStartTime()
@@ -97,4 +108,10 @@ public class PointAwardSystem : MonoBehaviour
         startTime = timeSystem.GetTimer();
     }
     
+    private void OnDestroy()
+    {
+        Instance = null;
+        TimeSystem.OnTimeStarted -= SetAwardTrue;
+        TimeSystem.OnTimeEnded -= SetAwardFalse;
+    }
 }

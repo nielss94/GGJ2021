@@ -32,4 +32,10 @@ public class IntroToGameSystem : MonoBehaviour
         intro.DOFade(0, fadeOutTime);
         hud.DOFade(1, fadeInTime);
     }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStarted -= ShowIntro;
+        IntroDialog.OnIntroComplete -= ShowHUD;
+    }
 }

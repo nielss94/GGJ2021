@@ -15,4 +15,9 @@ public class OnGameEndGoToScore : MonoBehaviour
     {
         SceneManager.LoadScene("Score");
     }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameEnded -= GoToScore;
+    }
 }

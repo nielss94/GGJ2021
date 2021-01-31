@@ -47,4 +47,10 @@ public class LostChildUI : MonoBehaviour
                 renderImage.DOFade(1, .5f);
             });
     }
+
+    private void OnDestroy()
+    {
+        LostChildSystem.OnNewChildSelected -= NewChildSelected;
+        PlayerInteraction.OnTakeChild -= RemoveChildFromUI;
+    }
 }

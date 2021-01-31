@@ -43,4 +43,9 @@ public class PlayerSlow : MonoBehaviour {
             controller.strafeSpeed = initialStrafeSpeed * slowAmount;
         }
     }
+
+    private void OnDestroy()
+    {
+        PlayerDash.OnStopDash -= CheckSlow;
+    }
 }
