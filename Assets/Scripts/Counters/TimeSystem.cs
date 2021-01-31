@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 public class TimeSystem : MonoBehaviour
@@ -20,6 +21,11 @@ public class TimeSystem : MonoBehaviour
     private int minutes = 0;
     private int seconds = 0;
     
+    [SerializeField]
+    private AudioSource countdown;
+
+    public AudioSource mainMusic;
+    private bool countdownStarted = false;
     
     private void Awake()
     {
@@ -64,7 +70,19 @@ public class TimeSystem : MonoBehaviour
         minutes = Mathf.FloorToInt((timer < 0 ? 0 : timer) / 60);
         seconds = Mathf.FloorToInt((timer < 0 ? 0 : timer) % 60);
             
+        if(!countdownStarted && seconds < 33)
+        {
+            StartCountDown();
+        }
+
         OnReadableTimeChanged.Invoke(string.Format("{0:00}:{1:00}", minutes, seconds));
+    }
+    
+    private void StartCountDown()
+    {
+        countdownStarted = true;
+        mainMusic.DOFade(0, 0.5f);
+        countdown.Play();
     }
 
     private void StartTime()
