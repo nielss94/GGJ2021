@@ -11,6 +11,7 @@ using UnityEngine.SearchService;
 public class PlayerDash : MonoBehaviour
 {
     public static event Action OnDash = delegate {  };
+    public static event Action OnDashHit = delegate {  };
     public static event Action OnStopDash = delegate {  };
     
 
@@ -76,6 +77,7 @@ public class PlayerDash : MonoBehaviour
             if (child.canGetKnockedDown) {
                 Vector3 effectPos = other.transform.position + dashEffectOffset;
                 Instantiate(dashHitEffectPrefab, effectPos, Quaternion.identity);
+                OnDashHit?.Invoke();
                 Vector3 normalizedAngle = (child.transform.position - transform.position) + Vector3.up + transform.TransformDirection(Vector3.forward).normalized;
                 child.KnockBack(normalizedAngle.normalized, dashKnockbackForce);
             }

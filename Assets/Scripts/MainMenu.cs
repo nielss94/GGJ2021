@@ -11,15 +11,17 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject creditMenu;
 
+    private bool startClicked = false;
+
     private void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        StartCoroutine(LoadLevel());
     }
     
-    public void StartGame()
-    {
-        SceneManager.LoadScene("Game");
+    public void StartGame() {
+        startClicked = true;
     }
 
     public void QuitGame()
@@ -51,5 +53,17 @@ public class MainMenu : MonoBehaviour
         
         creditMenu.SetActive(false);
         settingsMenu.SetActive(false);
+    }
+
+    private IEnumerator LoadLevel() {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Game");
+        asyncLoad.allowSceneActivation = false;
+
+        while (!startClicked) {
+            yield return null;
+            
+        }
+
+        asyncLoad.allowSceneActivation = true;
     }
 }
