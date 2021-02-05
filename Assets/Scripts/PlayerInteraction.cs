@@ -17,7 +17,6 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float interactionDistance;
     [SerializeField] private Transform childHolder;
     [SerializeField] private KeyCode interactButton;
-
     private Child interactingChild = null;
     private Child takenChild = null;
     private bool canDeliver = false;
@@ -69,15 +68,42 @@ public class PlayerInteraction : MonoBehaviour
             if (hit.transform.gameObject.TryGetComponent(out Child child))
             {
                 interactingChild = child;
+                if (interactingChild.TryGetComponent(out Outline outline))
+                {
+                    if (!outline.enabled)
+                    {
+                        outline.enabled = true;
+                    }
+                }
             }
             else
             {
-                interactingChild = null;
+                if (interactingChild)
+                {
+                    if (interactingChild.TryGetComponent(out Outline outline))
+                    {
+                        if (outline.enabled)
+                        {
+                            outline.enabled = false;
+                        }
+                    }
+                    interactingChild = null;
+                }
             }
         }
         else
         {
-            interactingChild = null;
+            if (interactingChild)
+            {
+                if (interactingChild.TryGetComponent(out Outline outline))
+                {
+                    if (outline.enabled)
+                    {
+                        outline.enabled = false;
+                    }
+                }
+                interactingChild = null;
+            }
         }
         
         OnInteraction?.Invoke(interactingChild);

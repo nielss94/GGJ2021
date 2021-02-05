@@ -21941,6 +21941,11 @@ PrefabInstance:
       propertyPath: time
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 9037344100506769397, guid: 3b19a1b64d4064c62a831c5c25dae18d,
+        type: 3}
+      propertyPath: mainMusic
+      value: 
+      objectReference: {fileID: 1228876246}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b19a1b64d4064c62a831c5c25dae18d, type: 3}
 --- !u!1001 &659132914
@@ -43408,31 +43413,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2821701329224818128, guid: 538d71a3fdc08324e8aab70a714af964,
-        type: 3}
-      propertyPath: children.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2821701329224818128, guid: 538d71a3fdc08324e8aab70a714af964,
-        type: 3}
-      propertyPath: children.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2821701329224818128, guid: 538d71a3fdc08324e8aab70a714af964,
-        type: 3}
-      propertyPath: children.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2821701329224818128, guid: 538d71a3fdc08324e8aab70a714af964,
-        type: 3}
-      propertyPath: children.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2821701329224818128, guid: 538d71a3fdc08324e8aab70a714af964,
-        type: 3}
-      propertyPath: children.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2821701329224818129, guid: 538d71a3fdc08324e8aab70a714af964,
         type: 3}
       propertyPath: m_RootOrder
