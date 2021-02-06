@@ -43544,9 +43544,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6488932370106996184, guid: 6e69fb73bef71fd48aa60c9ddcd7add4,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488932370106996184, guid: 6e69fb73bef71fd48aa60c9ddcd7add4,
+        type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a419a4b6e42557943ac0a331b01cfae5, type: 3}
+      objectReference: {fileID: 8300000, guid: 458f5cee8757d914da9740c0d99ac9e1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e69fb73bef71fd48aa60c9ddcd7add4, type: 3}
 --- !u!82 &1228876246 stripped
@@ -45093,6 +45098,10 @@ PrefabInstance:
       propertyPath: mainAudioSource
       value: 
       objectReference: {fileID: 1228876246}
+    - target: {fileID: 47670232, guid: e3550e8b3b5d98c45a5fb025e6746c71, type: 3}
+      propertyPath: possibleDialogs.Array.data[7].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ebfd7bbbcc6c144f805a9b598f7fd53, type: 3}
     - target: {fileID: 169221635, guid: e3550e8b3b5d98c45a5fb025e6746c71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

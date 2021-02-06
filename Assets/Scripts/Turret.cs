@@ -16,8 +16,12 @@ public class Turret : MonoBehaviour {
     public GameObject turretBall;
     public Transform ballSpawnPoint;
     public bool shooting = false;
+    
+    AudioSource fireSfxSource;
+    public AudioClip[] fireSfx;
 
     private void OnEnable() {
+        fireSfxSource = GetComponent<AudioSource>();
         StartCoroutine(ShootRoutine());
     }
 
@@ -37,6 +41,11 @@ public class Turret : MonoBehaviour {
     }
 
     private void Shoot() {
+        if(fireSfx != null) {
+            fireSfxSource.PlayOneShot(fireSfx[Random.Range(0,fireSfx.Length)], 0.8f);
+        }
+
+
         GameObject turretBall = Instantiate(this.turretBall);
         turretBall.GetComponent<TurretBall>().canStun = true;
         turretBall.transform.position = ballSpawnPoint.position;

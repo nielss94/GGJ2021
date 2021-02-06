@@ -21,6 +21,13 @@ MonoBehaviour:
     type: 3}
   ballSpawnPoint: {fileID: 2493120665082712057}
   shooting: 0
+  fireSfx:
+  - {fileID: 8300000, guid: e29a461412ff26b4594c7fd9cd970b16, type: 3}
+  - {fileID: 8300000, guid: 16fbc52dc697eae4eaa2f3fe8e537621, type: 3}
+  - {fileID: 8300000, guid: a1fd3f134a82a8c4687492798497630a, type: 3}
+  - {fileID: 8300000, guid: 2fa2e42a02581c5419092fae69f5cfd0, type: 3}
+  - {fileID: 8300000, guid: 6c1fb870e32885442aa178169c5c5697, type: 3}
+  - {fileID: 8300000, guid: 6180a8d9bbf23d04e8536d84c6cc027d, type: 3}
 --- !u!114 &5891876591581391059
 MonoBehaviour:
   m_ObjectHideFlags: 0
