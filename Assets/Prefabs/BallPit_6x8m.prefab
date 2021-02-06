@@ -48,6 +48,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3557441396581324774}
     m_Modifications:
+    - target: {fileID: 7431481539360917515, guid: 329a8976169d7424c8978082764f446e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7431481539360917558, guid: 329a8976169d7424c8978082764f446e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7431481539360917559, guid: 329a8976169d7424c8978082764f446e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7431481539360917559, guid: 329a8976169d7424c8978082764f446e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7431481539565260829, guid: 329a8976169d7424c8978082764f446e,
         type: 3}
       propertyPath: m_RootOrder
@@ -108,7 +128,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallPit
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7431481539360917515, guid: 329a8976169d7424c8978082764f446e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 329a8976169d7424c8978082764f446e, type: 3}
 --- !u!4 &8433294207082101511 stripped
 Transform:
