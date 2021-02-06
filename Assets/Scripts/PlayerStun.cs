@@ -18,6 +18,10 @@ public class PlayerStun : MonoBehaviour
     private bool isStunned = false;
     private bool isCooldown = false;
 
+    [SerializeField]
+    private AudioClip stunSfx;
+    private AudioSource audioSource;
+
     private void Start() {
         initialStunPivotPos = stunPivot.transform.localPosition;
     }
@@ -46,6 +50,8 @@ public class PlayerStun : MonoBehaviour
 
         StartCoroutine(WaitStun());
         StartCoroutine(CooldownStun());
+
+        PlayStunSound();
     }
 
     public IEnumerator WaitStun()
@@ -71,5 +77,11 @@ public class PlayerStun : MonoBehaviour
         });
         isStunned = false;
         OnSetStunned.Invoke(isStunned);
+    }
+
+    private void PlayStunSound()
+    {
+        if(!audioSource) audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(stunSfx);
     }
 }

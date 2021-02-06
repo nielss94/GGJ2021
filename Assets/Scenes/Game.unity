@@ -20876,6 +20876,11 @@ PrefabInstance:
       propertyPath: m_RenderingPath
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6550821928642786089, guid: 8e26c9c775814ba499f8107b0629d6a9,
+        type: 3}
+      propertyPath: stunSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 08c501cb143bd754f95f262efb220761, type: 3}
     - target: {fileID: 8478559480994630881, guid: 8e26c9c775814ba499f8107b0629d6a9,
         type: 3}
       propertyPath: m_RootOrder
