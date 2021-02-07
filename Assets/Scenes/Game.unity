@@ -20876,6 +20876,11 @@ PrefabInstance:
       propertyPath: m_RenderingPath
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6550821928642786089, guid: 8e26c9c775814ba499f8107b0629d6a9,
+        type: 3}
+      propertyPath: stunSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 08c501cb143bd754f95f262efb220761, type: 3}
     - target: {fileID: 8478559480994630881, guid: 8e26c9c775814ba499f8107b0629d6a9,
         type: 3}
       propertyPath: m_RootOrder
@@ -43551,7 +43556,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 458f5cee8757d914da9740c0d99ac9e1, type: 3}
+      objectReference: {fileID: 8300000, guid: d865e47afa1f3a242a3b5f97cf5d2f26, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e69fb73bef71fd48aa60c9ddcd7add4, type: 3}
 --- !u!82 &1228876246 stripped
