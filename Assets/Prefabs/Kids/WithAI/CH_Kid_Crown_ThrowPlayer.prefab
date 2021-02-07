@@ -79,6 +79,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 991616155, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 991616155, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 991616155, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 991616155, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7332602668586336904, guid: c0452342b7c449b41b2cc1a0d154b2d6,
         type: 3}
       propertyPath: m_RootOrder
