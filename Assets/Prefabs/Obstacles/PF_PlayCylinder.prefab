@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5070221131374775768}
   - component: {fileID: 9113116511751006036}
   - component: {fileID: 5880749900782056515}
-  - component: {fileID: 1619320487712652085}
   - component: {fileID: -6568464097740204177}
   m_Layer: 0
   m_Name: PF_PlayCylinder
@@ -107,7 +106,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727805209443724301}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -115,19 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1619320487712652085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6727805209443724301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materials: []
 --- !u!114 &-6568464097740204177
 MonoBehaviour:
   m_ObjectHideFlags: 0
