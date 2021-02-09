@@ -253,9 +253,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3
-  m_Height: 1.2
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0.6, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &8478559480994630884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,9 +341,9 @@ MonoBehaviour:
   _airFriction: 0
   _airControl: 0.2
   _canCrouch: 1
-  _standingHeight: 1.2
+  _standingHeight: 1
   _crouchingHeight: 0.6
-  _baseJumpHeight: 0.65
+  _baseJumpHeight: 0.8
   _extraJumpTime: 0.5
   _extraJumpPower: 1
   _jumpPreGroundedToleranceTime: 0.15
@@ -427,6 +427,7 @@ MonoBehaviour:
   stunDuration: 1.5
   stunRotationSpeed: 150
   coolDownTime: 5
+  stunSfx: {fileID: 0}
 --- !u!114 &1426236946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,7 +580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8478559482116802587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3704685927118042693}
@@ -1052,7 +1053,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d0eadd389e262234e88c948a739ee8ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.094
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0eadd389e262234e88c948a739ee8ed,
         type: 3}
