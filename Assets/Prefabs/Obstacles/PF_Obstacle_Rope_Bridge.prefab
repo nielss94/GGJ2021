@@ -32,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3546995874730247615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078403830299223289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
 --- !u!1 &9037269457266541832
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,13 +207,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RopeWalkBridge_2x4
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d511c6945e1b3044aa7cbc48a4255007,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d511c6945e1b3044aa7cbc48a4255007, type: 3}
+--- !u!1 &8078403830299223289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d511c6945e1b3044aa7cbc48a4255007,
+    type: 3}
+  m_PrefabInstance: {fileID: 8997392342863239592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8887732742705626691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d511c6945e1b3044aa7cbc48a4255007,
