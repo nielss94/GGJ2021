@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThrowTime: 10
   NavTargets: []
-  approachThreshold: 1
+  approachThreshold: 1.3
 --- !u!1001 &8404753633149210118
 PrefabInstance:
   m_ObjectHideFlags: 0
