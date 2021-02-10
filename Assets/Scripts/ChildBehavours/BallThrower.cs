@@ -11,6 +11,7 @@ using Random = UnityEngine.Random;
 public class BallThrower : MonoBehaviour {
     public float ThrowTime = 3f;
     public NavTarget[] NavTargets;
+    public float approachThreshold = 0.5f;
 
     private NavTargetManager navTargetManager;
     private NavMeshAgent agent;
@@ -42,7 +43,7 @@ public class BallThrower : MonoBehaviour {
             isNavigating &&
             agent.enabled &&
             !agent.pathPending &&
-            agent.remainingDistance < 0.5f) {
+            agent.remainingDistance < approachThreshold) {
             StartCoroutine(GoToThrowingPoint());
         }
     }
@@ -60,7 +61,11 @@ public class BallThrower : MonoBehaviour {
         turret.enabled = false;
         isThrowing = false;
         
-        agent.destination = NavTargets[Random.Range(0, NavTargets.Length - 1)].transform.position;
+        if (NavTargets.Length > 0) {
+            if (agent.enabled) agent.destination = NavTargets[Random.Range(0, NavTargets.Length - 1)].transform.position;
+        } else {
+            Debug.LogWarning("Agent is missing nav-targets.");
+        }
     }
     
     private void StopNavigation() {
@@ -69,7 +74,9 @@ public class BallThrower : MonoBehaviour {
     }
 
     private void OnDestroy() {
-        childNavAgent.OnStartNavigation -= StartNavigation;
-        childNavAgent.OnEndNavigation -= StopNavigation;
+        if (childNavAgent) {
+            childNavAgent.OnStartNavigation -= StartNavigation;
+            childNavAgent.OnEndNavigation -= StopNavigation;
+        }
     }
 }
