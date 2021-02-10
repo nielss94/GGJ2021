@@ -20,7 +20,8 @@ public class PlayerInteraction : MonoBehaviour
     private Child interactingChild = null;
     private Child takenChild = null;
     private bool canDeliver = false;
-
+    private bool insideDeliveryPoint = false;
+    
     private Ray ray;
     private void Update()
     {
@@ -58,6 +59,7 @@ public class PlayerInteraction : MonoBehaviour
             canDeliver = false;
         }
 
+        canDeliver = canDeliver || takenChild && insideDeliveryPoint;
         OnDeliverInteraction?.Invoke(canDeliver);
     }
     
@@ -140,4 +142,19 @@ public class PlayerInteraction : MonoBehaviour
         takenChild.GetComponent<ChildAudio>().Taken();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("ChildDelivery"))
+        {
+            insideDeliveryPoint = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("ChildDelivery"))
+        {
+            insideDeliveryPoint = false;
+        }
+    }
 }
