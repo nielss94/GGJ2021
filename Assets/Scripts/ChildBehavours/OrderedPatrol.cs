@@ -8,6 +8,7 @@ public class OrderedPatrol : MonoBehaviour
 {
     public NavTarget[] NavTargets;
     public float WaitTime = 0f;
+    public float approachThreshold = 0.5f;
     
     private NavTargetManager navTargetManager;
     private int destIndex;
@@ -43,7 +44,7 @@ public class OrderedPatrol : MonoBehaviour
             isNavigating &&
             agent.enabled &&
             !agent.pathPending &&
-            agent.remainingDistance < 0.5f) {
+            agent.remainingDistance < approachThreshold) {
             StartCoroutine(GoToNextPoint());
         }
     }
@@ -56,13 +57,19 @@ public class OrderedPatrol : MonoBehaviour
             yield break;
         }
 
-        agent.destination = NavTargets[destIndex].transform.position;
+        if (NavTargets.Length > 0) {
+            if (agent.enabled) agent.destination = NavTargets[destIndex].transform.position;
+        } else {
+            Debug.LogWarning("Agent is missing nav-targets.");
+        }
         destIndex = (destIndex + 1) % NavTargets.Length;
         isWaiting = false;
     }
 
     private void OnDestroy() {
-        childNavAgent.OnStartNavigation -= StartNavigation;
-        childNavAgent.OnEndNavigation -= StopNavigation;
+        if (childNavAgent) {
+            childNavAgent.OnStartNavigation -= StartNavigation;
+            childNavAgent.OnEndNavigation -= StopNavigation;
+        }
     }
 }
