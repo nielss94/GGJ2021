@@ -11,7 +11,9 @@ public class Child : MonoBehaviour
     public Transform hats;
     public float stunTime = 2;
     [SerializeField] private Renderer renderer;
-    
+    [SerializeField] private AudioClip knockbackSfx;
+    [SerializeField] private AudioSource audioSource;
+
     public void KnockBack(Vector3 normalizedAngle, float force)
     {
         if (transform.TryGetComponent<NavMeshAgent>(out var agent)) {
@@ -22,6 +24,7 @@ public class Child : MonoBehaviour
         
         GetComponent<Rigidbody>().AddForce(normalizedAngle * force, ForceMode.Impulse);
 
+        audioSource.PlayOneShot(knockbackSfx);
     }
 
     public void SetVisualCombination(KeyValuePair<Material, string> combo)
