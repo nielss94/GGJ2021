@@ -275,6 +275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_ChildDelivery (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3271766212262900550, guid: bda32bc07fd1e6749850a7b081de2863,
+        type: 3}
+      propertyPath: uiCameraTransform
+      value: 
+      objectReference: {fileID: 1926415624}
     - target: {fileID: 5858522635470969909, guid: bda32bc07fd1e6749850a7b081de2863,
         type: 3}
       propertyPath: m_RootOrder
@@ -413,6 +418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_ChildDelivery (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3271766212262900550, guid: bda32bc07fd1e6749850a7b081de2863,
+        type: 3}
+      propertyPath: uiCameraTransform
+      value: 
+      objectReference: {fileID: 1926415624}
     - target: {fileID: 5858522635470969909, guid: bda32bc07fd1e6749850a7b081de2863,
         type: 3}
       propertyPath: m_RootOrder
@@ -482,6 +492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_ChildDelivery (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3271766212262900550, guid: bda32bc07fd1e6749850a7b081de2863,
+        type: 3}
+      propertyPath: uiCameraTransform
+      value: 
+      objectReference: {fileID: 1926415624}
     - target: {fileID: 5858522635470969909, guid: bda32bc07fd1e6749850a7b081de2863,
         type: 3}
       propertyPath: m_RootOrder
@@ -551,6 +566,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_ChildDelivery
       objectReference: {fileID: 0}
+    - target: {fileID: 3271766212262900550, guid: bda32bc07fd1e6749850a7b081de2863,
+        type: 3}
+      propertyPath: uiCameraTransform
+      value: 
+      objectReference: {fileID: 1926415624}
     - target: {fileID: 5858522635470969909, guid: bda32bc07fd1e6749850a7b081de2863,
         type: 3}
       propertyPath: m_RootOrder
@@ -21733,6 +21753,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_ChildDelivery (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3271766212262900550, guid: bda32bc07fd1e6749850a7b081de2863,
+        type: 3}
+      propertyPath: uiCameraTransform
+      value: 
+      objectReference: {fileID: 1926415624}
     - target: {fileID: 5858522635470969909, guid: bda32bc07fd1e6749850a7b081de2863,
         type: 3}
       propertyPath: m_RootOrder
@@ -22139,6 +22164,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e86ba9209076425409db450fa85aee34, type: 3}
+--- !u!4 &1926415624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3704685927118042693, guid: 8e26c9c775814ba499f8107b0629d6a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 825888614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1982972685
 GameObject:
   m_ObjectHideFlags: 0
@@ -22524,6 +22555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_ChildDelivery (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3271766212262900550, guid: bda32bc07fd1e6749850a7b081de2863,
+        type: 3}
+      propertyPath: uiCameraTransform
+      value: 
+      objectReference: {fileID: 1926415624}
     - target: {fileID: 5858522635470969909, guid: bda32bc07fd1e6749850a7b081de2863,
         type: 3}
       propertyPath: m_RootOrder
