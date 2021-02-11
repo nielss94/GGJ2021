@@ -20,7 +20,7 @@ public class NavTargetManager : MonoBehaviour {
     }
 
     public List<NavTarget> GetAllNavTargets() {
-        return NavTargets;
+        return new List<NavTarget>(NavTargets);
     }
 
     private void GatherAllNavTargets() {

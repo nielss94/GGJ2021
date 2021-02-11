@@ -72,7 +72,7 @@ public class OrderedPatrol : MonoBehaviour
         for (int i = 0; i < NavTargets.Count; i++) {
             var temp = NavTargets[i];
             int swapIndex = Random.Range(i, NavTargets.Count);
-            NavTargets[i] = NavTargets[Random.Range(i, swapIndex)];
+            NavTargets[i] = NavTargets[swapIndex];
             NavTargets[swapIndex] = temp;
         }
     }
