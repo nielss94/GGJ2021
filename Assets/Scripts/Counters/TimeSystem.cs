@@ -81,7 +81,7 @@ public class TimeSystem : MonoBehaviour
     private void StartCountDown()
     {
         countdownStarted = true;
-        mainMusic.DOFade(0, 0.5f);
+        mainMusic.DOFade(0, 0.1f);
         countdown.Play();
     }
 
