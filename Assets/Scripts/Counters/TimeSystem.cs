@@ -70,7 +70,7 @@ public class TimeSystem : MonoBehaviour
         minutes = Mathf.FloorToInt((timer < 0 ? 0 : timer) / 60);
         seconds = Mathf.FloorToInt((timer < 0 ? 0 : timer) % 60);
             
-        if(!countdownStarted && seconds < 33 && minutes == 0)
+        if(!countdownStarted && seconds < 32 && minutes == 0)
         {
             StartCountDown();
         }
@@ -81,7 +81,7 @@ public class TimeSystem : MonoBehaviour
     private void StartCountDown()
     {
         countdownStarted = true;
-        mainMusic.DOFade(0, 0.5f);
+        mainMusic.DOFade(0, 0.1f);
         countdown.Play();
     }
 

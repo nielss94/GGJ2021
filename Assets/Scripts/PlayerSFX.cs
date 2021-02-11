@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerSFX : MonoBehaviour
 {
     public AudioClip dash;
-    public AudioClip dashHit;
     private AudioSource audioSource;
 
     private void Awake()
@@ -23,7 +22,7 @@ public class PlayerSFX : MonoBehaviour
     }
 
     private void PlayDashHitSound() {
-        audioSource.PlayOneShot(dashHit);
+       // audioSource.PlayOneShot(dashHit);
     }
 
     private void OnDestroy()
