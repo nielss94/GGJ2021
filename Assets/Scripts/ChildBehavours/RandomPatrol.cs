@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class RandomPatrol : MonoBehaviour {
-    public NavTarget[] NavTargets;
+    public List<NavTarget> NavTargets;
     public float WaitTime = 0f;
     public float approachThreshold = 0.5f;
     
@@ -24,7 +25,7 @@ public class RandomPatrol : MonoBehaviour {
     }
 
     private void StartNavigation() {
-        if (NavTargets.Length == 0) {
+        if (NavTargets.Count == 0) {
             navTargetManager = NavTargetManager.Instance;
             NavTargets = navTargetManager.GetAllNavTargets();
         }
@@ -44,13 +45,14 @@ public class RandomPatrol : MonoBehaviour {
     private IEnumerator GoToRandomPoint() {
         isWaiting = true;
         yield return new WaitForSeconds(WaitTime);
-        if (NavTargets.Length == 0) {
+        if (NavTargets.Count == 0) {
             isWaiting = false;
             yield break;
         }
 
-        if (NavTargets.Length > 0) {
-            if (agent.enabled) agent.destination = NavTargets[Random.Range(0, NavTargets.Length - 1)].transform.position;
+        if (NavTargets.Count > 0) {
+            var navTargetIndex = Random.Range(0, NavTargets.Count - 1);
+            if (agent.enabled) agent.destination = NavTargets[navTargetIndex].transform.position;
         } else {
             Debug.LogWarning("Agent is missing nav-targets.");
         }

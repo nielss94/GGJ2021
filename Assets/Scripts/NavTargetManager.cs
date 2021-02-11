@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NavTargetManager : MonoBehaviour {
 
-    private NavTarget[] NavTargets;
+    public List<NavTarget> NavTargets;
     public static NavTargetManager Instance { get; private set; }
 
     private void Awake() {
@@ -15,17 +16,18 @@ public class NavTargetManager : MonoBehaviour {
             Instance = this;
         }
         
-        GatherAllNavTargets();
+        // GatherAllNavTargets();
     }
 
-    public NavTarget[] GetAllNavTargets() {
+    public List<NavTarget> GetAllNavTargets() {
         return NavTargets;
     }
 
     private void GatherAllNavTargets() {
-        NavTargets = FindObjectsOfType<NavTarget>();
+        // NavTargets = FindObjectsOfType<NavTarget>().ToList();
+        NavTargets = GetComponentsInChildren<NavTarget>().ToList();
     }
-    
+
     private void OnDestroy()
     {
         Instance = null;
