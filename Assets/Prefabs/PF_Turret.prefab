@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1389092506645416220}
   - component: {fileID: -1836461842738746096}
   m_Layer: 13
-  m_Name: Turret
+  m_Name: PF_Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootInterval: 3
-  ballSpeed: 0.02
+  ballSpeed: 0.028
   ballSpeedRandomness: 1.5
   spread: 0.005
   despawnTime: 10
