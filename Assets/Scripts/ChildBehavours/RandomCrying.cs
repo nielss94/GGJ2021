@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class RandomCrying : MonoBehaviour
 {
-    public NavTarget[] NavTargets;
+    public List<NavTarget> NavTargets;
     public float WaitTime = 0f;
     public float approachThreshold = 0.5f;
     
@@ -27,7 +28,7 @@ public class RandomCrying : MonoBehaviour
     }
 
     private void StartNavigation() {
-        if (NavTargets.Length == 0) {
+        if (NavTargets.Count == 0) {
             navTargetManager = NavTargetManager.Instance;
             NavTargets = navTargetManager.GetAllNavTargets();
         }
@@ -55,19 +56,19 @@ public class RandomCrying : MonoBehaviour
         isWaiting = true;
         animator.SetBool("crying", true);
         yield return new WaitForSeconds(WaitTime);
-        if (NavTargets.Length == 0) {
+        if (NavTargets.Count == 0) {
             isWaiting = false;
             yield break;
         }
 
         animator.SetBool("crying", false);
-        if (NavTargets.Length > 0) {
-            if (agent.enabled) agent.destination = NavTargets[destIndex].transform.position;
+        if (NavTargets.Count > 0) {
+            var navTargetIndex = Random.Range(0, NavTargets.Count - 1);
+            if (agent.enabled) agent.destination = NavTargets[navTargetIndex].transform.position;
         } else {
             Debug.LogWarning("Agent is missing nav-targets.");
         }
-
-        destIndex = (destIndex + 1) % NavTargets.Length;
+        
         isWaiting = false;
     }
 

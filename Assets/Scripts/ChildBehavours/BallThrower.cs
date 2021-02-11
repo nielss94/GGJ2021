@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Turret))]
 public class BallThrower : MonoBehaviour {
     public float ThrowTime = 3f;
-    public NavTarget[] NavTargets;
+    public List<NavTarget> NavTargets;
     public float approachThreshold = 0.5f;
 
     private NavTargetManager navTargetManager;
@@ -31,7 +31,7 @@ public class BallThrower : MonoBehaviour {
     }
     
     private void StartNavigation() {
-        if (NavTargets.Length == 0) {
+        if (NavTargets.Count == 0) {
             navTargetManager = NavTargetManager.Instance;
             NavTargets = navTargetManager.GetAllNavTargets();
         }
@@ -61,8 +61,9 @@ public class BallThrower : MonoBehaviour {
         turret.enabled = false;
         isThrowing = false;
         
-        if (NavTargets.Length > 0) {
-            if (agent.enabled) agent.destination = NavTargets[Random.Range(0, NavTargets.Length - 1)].transform.position;
+        if (NavTargets.Count > 0) {
+            var navTargetIndex = Random.Range(0, NavTargets.Count - 1);
+            if (agent.enabled) agent.destination = NavTargets[navTargetIndex].transform.position;
         } else {
             Debug.LogWarning("Agent is missing nav-targets.");
         }
