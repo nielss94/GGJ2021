@@ -1369,7 +1369,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1fc6558dace27dd4da4d3df11d371478, type: 3}
   minInterval: 3
   maxInterval: 7
-  chanceToDoVoiceLinePerInterval: 10
+  chanceToDoVoiceLinePerInterval: 5
 --- !u!82 &991616155
 AudioSource:
   m_ObjectHideFlags: 0
