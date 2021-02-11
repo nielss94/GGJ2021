@@ -22,6 +22,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 907833651, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 246774582740225259}
+    - target: {fileID: 907833651, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
+      propertyPath: knockbackSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ef2f2ca6978f5c4497b4428d44671d0, type: 3}
     - target: {fileID: 991616155, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
       propertyPath: MaxDistance
       value: 10
@@ -103,6 +111,12 @@ PrefabInstance:
 --- !u!1 &7918959574056601666 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7965024866562463794, guid: c0452342b7c449b41b2cc1a0d154b2d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 246774582286569584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &246774582740225259 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 991616155, guid: c0452342b7c449b41b2cc1a0d154b2d6,
     type: 3}
   m_PrefabInstance: {fileID: 246774582286569584}
   m_PrefabAsset: {fileID: 0}
