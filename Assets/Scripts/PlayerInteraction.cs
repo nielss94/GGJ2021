@@ -130,10 +130,9 @@ public class PlayerInteraction : MonoBehaviour
         takenChild.transform.SetParent(childHolder);
         takenChild.GetComponent<Rigidbody>().isKinematic = true;
         takenChild.GetComponent<Collider>().enabled = false;
-        takenChild.GetComponent<Animator>().enabled = false;
         takenChild.GetComponent<NavMeshAgent>().enabled = false;
         takenChild.GetComponent<ChildNavAgent>().enabled = false;
-        
+        takenChild.GetComponent<Animator>().SetBool("flounder", true);
         takenChild.transform.localPosition = Vector3.zero;
         takenChild.transform.localEulerAngles = Vector3.zero;
         
