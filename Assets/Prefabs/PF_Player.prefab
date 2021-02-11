@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 192167620}
   - component: {fileID: 5844683274962307448}
   m_Layer: 11
-  m_Name: Player
+  m_Name: PF_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ CapsuleCollider:
   m_Radius: 0.3
   m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.65, z: 0}
 --- !u!114 &8478559480994630884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +343,7 @@ MonoBehaviour:
   _canCrouch: 1
   _standingHeight: 1
   _crouchingHeight: 0.6
-  _baseJumpHeight: 0.8
+  _baseJumpHeight: 0.9
   _extraJumpTime: 0.5
   _extraJumpPower: 1
   _jumpPreGroundedToleranceTime: 0.15
