@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NavTargets: []
   WaitTime: 5
+  approachThreshold: 1.3
 --- !u!1001 &246774582286569584
 PrefabInstance:
   m_ObjectHideFlags: 0

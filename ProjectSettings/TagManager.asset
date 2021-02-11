@@ -16,10 +16,10 @@ TagManager:
   - ChildDelivery
   - PostProcessing
   - Warehouse
-  - 
-  - 
-  - 
-  - 
+  - BallPit
+  - Player
+  - Ball
+  - Turret
   - 
   - 
   - 

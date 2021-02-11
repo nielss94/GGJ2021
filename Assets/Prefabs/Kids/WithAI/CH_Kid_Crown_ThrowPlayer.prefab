@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootInterval: 3
-  ballSpeed: 5
-  ballSpeedRandomness: 1.01
-  spread: 0.3
-  despawnTime: 5
+  ballSpeed: 0.02
+  ballSpeedRandomness: 1.5
+  spread: 0.005
+  despawnTime: 10
   turretBall: {fileID: 239541535869637775, guid: 263165be4bd3e1540a4d9593edd7c119,
     type: 3}
   ballSpawnPoint: {fileID: 2493120665082712057}
@@ -40,8 +40,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538c28422dafcd1479c711e1f9944ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThrowTime: 3
+  ThrowTime: 10
   NavTargets: []
+  approachThreshold: 1.3
 --- !u!1 &4281459990303726783
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +95,11 @@ PrefabInstance:
     - target: {fileID: 991616155, guid: c0452342b7c449b41b2cc1a0d154b2d6, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 805723171704973029, guid: c0452342b7c449b41b2cc1a0d154b2d6,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7332602668586336904, guid: c0452342b7c449b41b2cc1a0d154b2d6,
         type: 3}
