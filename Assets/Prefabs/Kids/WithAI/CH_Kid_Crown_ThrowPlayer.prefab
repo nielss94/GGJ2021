@@ -1,48 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1968249208762369123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340627074256743417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d6d3d64f7341074894846692b0e94af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootInterval: 3
-  ballSpeed: 5
-  ballSpeedRandomness: 1.01
-  spread: 0.3
-  despawnTime: 5
-  turretBall: {fileID: 239541535869637775, guid: 263165be4bd3e1540a4d9593edd7c119,
-    type: 3}
-  ballSpawnPoint: {fileID: 2493120665082712057}
-  shooting: 0
-  fireSfx:
-  - {fileID: 8300000, guid: e29a461412ff26b4594c7fd9cd970b16, type: 3}
-  - {fileID: 8300000, guid: 16fbc52dc697eae4eaa2f3fe8e537621, type: 3}
-  - {fileID: 8300000, guid: a1fd3f134a82a8c4687492798497630a, type: 3}
-  - {fileID: 8300000, guid: 2fa2e42a02581c5419092fae69f5cfd0, type: 3}
-  - {fileID: 8300000, guid: 6c1fb870e32885442aa178169c5c5697, type: 3}
-  - {fileID: 8300000, guid: 6180a8d9bbf23d04e8536d84c6cc027d, type: 3}
---- !u!114 &5891876591581391059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340627074256743417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538c28422dafcd1479c711e1f9944ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThrowTime: 10
-  NavTargets: []
-  approachThreshold: 1.3
 --- !u!1 &4281459990303726783
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +30,49 @@ Transform:
   m_Father: {fileID: 2672774449623757123}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1968249208762369123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340627074256743417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6d3d64f7341074894846692b0e94af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootInterval: 3
+  ballSpeed: 5
+  ballSpeedRandomness: 1.01
+  spread: 0.3
+  despawnTime: 5
+  turretBall: {fileID: 239541535869637775, guid: dd23df1d3d24f024991036dd4b2d07db,
+    type: 3}
+  ballSpawnPoint: {fileID: 2493120665082712057}
+  shooting: 0
+  fireSfx:
+  - {fileID: 8300000, guid: e29a461412ff26b4594c7fd9cd970b16, type: 3}
+  - {fileID: 8300000, guid: 16fbc52dc697eae4eaa2f3fe8e537621, type: 3}
+  - {fileID: 8300000, guid: a1fd3f134a82a8c4687492798497630a, type: 3}
+  - {fileID: 8300000, guid: 2fa2e42a02581c5419092fae69f5cfd0, type: 3}
+  - {fileID: 8300000, guid: 6c1fb870e32885442aa178169c5c5697, type: 3}
+  - {fileID: 8300000, guid: 6180a8d9bbf23d04e8536d84c6cc027d, type: 3}
+--- !u!114 &5891876591581391059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340627074256743417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538c28422dafcd1479c711e1f9944ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrowTime: 10
+  NavTargets: []
+  approachThreshold: 1.3
 --- !u!1001 &4671703365535396811
 PrefabInstance:
   m_ObjectHideFlags: 0
