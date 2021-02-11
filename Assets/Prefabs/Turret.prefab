@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &8574731245859267067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2177419371847810036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materials: []
 --- !u!1 &1389092506563147374
 GameObject:
   m_ObjectHideFlags: 0
@@ -22,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1389092506563147373}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BallSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1389092506563147373
 Transform:
@@ -54,12 +41,12 @@ GameObject:
   - component: {fileID: 1389092506645416291}
   - component: {fileID: 1389092506645416220}
   - component: {fileID: -1836461842738746096}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1389092506645416291
 Transform:
@@ -89,10 +76,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootInterval: 3
-  ballSpeed: 5
-  ballSpeedRandomness: 1.01
-  spread: 0.3
-  despawnTime: 5
+  ballSpeed: 0.02
+  ballSpeedRandomness: 1.5
+  spread: 0.005
+  despawnTime: 10
   turretBall: {fileID: 239541535869637775, guid: 263165be4bd3e1540a4d9593edd7c119,
     type: 3}
   ballSpawnPoint: {fileID: 1389092506563147373}
@@ -198,6 +185,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8574731245859267067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177419371847810036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a9d7a6ba0653f4b9de89717b278974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
 --- !u!114 &7534591959191983143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +305,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Cannon_Arm
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3f807f8d00841d4587729b9f63bcd47,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3f807f8d00841d4587729b9f63bcd47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f807f8d00841d4587729b9f63bcd47, type: 3}
 --- !u!1 &2177419371847810036 stripped
@@ -386,6 +396,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Cannon_Base
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7f3fa2806e29ed4b8ad2c4abf421f04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7f3fa2806e29ed4b8ad2c4abf421f04,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f3fa2806e29ed4b8ad2c4abf421f04, type: 3}
 --- !u!1 &3290557306704948315 stripped
@@ -466,6 +486,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Cannon_Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92ad3bf29a4ca8847803a5dffacfadb7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92ad3bf29a4ca8847803a5dffacfadb7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ad3bf29a4ca8847803a5dffacfadb7, type: 3}
