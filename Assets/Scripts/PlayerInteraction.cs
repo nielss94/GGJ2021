@@ -34,7 +34,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (LostChildSystem.Instance.DeliverChild(takenChild))
             {
-                takenChild.gameObject.SetActive(false);
+                Destroy(takenChild.gameObject);
                 takenChild = null;
                 OnDeliverChild.Invoke();
             }
@@ -67,9 +67,6 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Physics.Raycast(ray, out var hit, interactionDistance, childHitLayer) && !takenChild)
         {
-            // if hit child == currentchild > return
-            // if hit child != currentchild > turn off current outline, turn on new outline
-            // outline on hit child
             if (hit.transform.gameObject.TryGetComponent(out Child child))
             {
                 if (interactingChild)
@@ -90,7 +87,6 @@ public class PlayerInteraction : MonoBehaviour
         }
         else
         {
-            
             if (interactingChild)
             {
                 if (interactingChild.TryGetComponent(out Outline iOutline))
@@ -129,6 +125,8 @@ public class PlayerInteraction : MonoBehaviour
         takenChild.GetComponent<Animator>().SetBool("flounder", true);
         takenChild.transform.localPosition = Vector3.zero;
         takenChild.transform.localEulerAngles = Vector3.zero;
+
+        takenChild.StopStandupCoroutine();
         
         OnTakeChild?.Invoke(takenChild);
         
