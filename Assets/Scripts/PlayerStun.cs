@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using ECM.Controllers;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerStun : MonoBehaviour
 {
@@ -22,7 +23,15 @@ public class PlayerStun : MonoBehaviour
     private AudioClip stunSfx;
     private AudioSource audioSource;
 
-    private void Start() {
+
+    private float musicVol;
+    private float stunMusicVol;
+
+    public AudioMixer masterMixer;
+
+
+
+private void Start() {
         initialStunPivotPos = stunPivot.transform.localPosition;
     }
 
@@ -39,6 +48,9 @@ public class PlayerStun : MonoBehaviour
         yield return new WaitForSeconds(coolDownTime);
 
         isCooldown = false;
+
+        SetMixerVolume("MusicVolume", musicVol);
+        SetMixerVolume("StunMusicVolume", -80);
     }
     
     public void Stun() {
@@ -83,5 +95,18 @@ public class PlayerStun : MonoBehaviour
     {
         if(!audioSource) audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(stunSfx);
+
+
+
+        masterMixer.GetFloat("MusicVolume", out musicVol);
+
+        SetMixerVolume("MusicVolume", -80);
+        SetMixerVolume("StunMusicVolume", musicVol);
     }
+
+    private void SetMixerVolume(String target, float soundLevel)
+    {
+        masterMixer.SetFloat(target, soundLevel);
+    }
+
 }
