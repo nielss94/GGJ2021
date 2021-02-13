@@ -67,43 +67,37 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Physics.Raycast(ray, out var hit, interactionDistance, childHitLayer) && !takenChild)
         {
+            // if hit child == currentchild > return
+            // if hit child != currentchild > turn off current outline, turn on new outline
+            // outline on hit child
             if (hit.transform.gameObject.TryGetComponent(out Child child))
-            {
-                interactingChild = child;
-                if (interactingChild.TryGetComponent(out Outline outline))
-                {
-                    if (!outline.enabled)
-                    {
-                        outline.enabled = true;
-                    }
-                }
-            }
-            else
             {
                 if (interactingChild)
                 {
-                    if (interactingChild.TryGetComponent(out Outline outline))
+                    if (interactingChild.TryGetComponent(out Outline iOutline))
                     {
-                        if (outline.enabled)
-                        {
-                            outline.enabled = false;
-                        }
+                        iOutline.enabled = false;
                     }
-                    interactingChild = null;
                 }
+                
+                if (child.TryGetComponent(out Outline outline))
+                {
+                    outline.enabled = true;
+                }
+
+                interactingChild = child;
             }
         }
         else
         {
+            
             if (interactingChild)
             {
-                if (interactingChild.TryGetComponent(out Outline outline))
+                if (interactingChild.TryGetComponent(out Outline iOutline))
                 {
-                    if (outline.enabled)
-                    {
-                        outline.enabled = false;
-                    }
+                    iOutline.enabled = false;
                 }
+                
                 interactingChild = null;
             }
         }
