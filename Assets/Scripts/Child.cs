@@ -14,12 +14,14 @@ public class Child : MonoBehaviour
     [SerializeField] private AudioClip knockbackSfx;
     [SerializeField] private AudioSource audioSource;
 
+    private Coroutine standUp = null;
+
     public void KnockBack(Vector3 normalizedAngle, float force)
     {
         if (transform.TryGetComponent<NavMeshAgent>(out var agent)) {
             agent.enabled = false;
             canGetKnockedDown = false;
-            StartCoroutine(StandUp());
+            standUp = StartCoroutine(StandUp());
         }
         
         GetComponent<Rigidbody>().AddForce(normalizedAngle * force, ForceMode.Impulse);
@@ -35,6 +37,14 @@ public class Child : MonoBehaviour
         if (combo.Value != "")
         {
             hats.Find(combo.Value).gameObject.SetActive(true);
+        }
+    }
+
+    public void StopStandupCoroutine()
+    {
+        if (standUp != null)
+        {
+            StopCoroutine(standUp);
         }
     }
 
