@@ -21,7 +21,11 @@ public class PlayerInteraction : MonoBehaviour
     private Child takenChild = null;
     private bool canDeliver = false;
     private bool insideDeliveryPoint = false;
-    
+
+    [SerializeField]
+    private AudioClip deliverySfx;
+    private AudioSource audioSource;
+
     private Ray ray;
     private void Update()
     {
@@ -37,6 +41,9 @@ public class PlayerInteraction : MonoBehaviour
                 Destroy(takenChild.gameObject);
                 takenChild = null;
                 OnDeliverChild.Invoke();
+
+                if(deliverySfx) audioSource.PlayOneShot(deliverySfx);
+                MusicManager.Instance.DeactivateCarryingMusic();
             }
         }
     }
@@ -106,6 +113,8 @@ public class PlayerInteraction : MonoBehaviour
         if (LostChildSystem.Instance.IsCurrentLostChild(child))
         {
             TakeChild(child);
+
+            MusicManager.Instance.ActivateCarryingMusic();
         }
         else
         {
