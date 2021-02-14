@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1762190070585398689}
   - component: {fileID: 6488932370106996184}
   - component: {fileID: 1066995250}
+  - component: {fileID: 6658819083415152289}
   m_Layer: 0
-  m_Name: Audio
+  m_Name: PF_Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,3 +143,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 32850948e98903a4db1401550f413996, type: 2}
+  fadeInAtStart: 1
+--- !u!114 &6658819083415152289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762190070585398690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 273f1709a4274a845ba57c80550811bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: 32850948e98903a4db1401550f413996, type: 2}
