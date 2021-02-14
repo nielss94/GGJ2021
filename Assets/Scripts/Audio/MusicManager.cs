@@ -24,9 +24,7 @@ public class MusicManager : MonoBehaviour
     private void Awake()
 	{
 		if (!Instance) Instance = this;
-		else if (Instance != this) Destroy(gameObject);
-		
-        DontDestroyOnLoad(gameObject);
+		else if (Instance != this) Destroy(gameObject);		
 	}
 
 	void Start()
@@ -54,7 +52,7 @@ public class MusicManager : MonoBehaviour
         currentSong = Song.Carrying;
     }
 
-    public void DectivateCarryingMusic()
+    public void DeactivateCarryingMusic()
     {
         currentSong = Song.Main; //let op COUNTDOWN
     }
