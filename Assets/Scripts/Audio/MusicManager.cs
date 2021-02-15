@@ -49,12 +49,16 @@ public class MusicManager : MonoBehaviour
 
     public void ActivateCarryingMusic()
     {
+        SetMixerVolume(mixerNames[(int)currentSong], MUTED);
         currentSong = Song.Carrying;
+        SetMixerVolume(mixerNames[(int)currentSong], musicVol);
     }
 
     public void DeactivateCarryingMusic()
     {
+        SetMixerVolume(mixerNames[(int)currentSong], MUTED);
         currentSong = Song.Main; //let op COUNTDOWN
+        SetMixerVolume(mixerNames[(int)currentSong], musicVol);
     }
 
 
