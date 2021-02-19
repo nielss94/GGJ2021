@@ -59,5 +59,6 @@ public class HandAnimator : MonoBehaviour
         BaseFirstPersonController.OnSetRunning -= Run;
         PlayerStun.OnSetStunned -= Stun;
         PlayerInteraction.OnTakeChild -= SetHoldingChild;
+        PlayerInteraction.OnDeliverChild -= SetNotHoldingChild;
     }
 }
