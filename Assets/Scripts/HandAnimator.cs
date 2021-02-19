@@ -8,6 +8,8 @@ public class HandAnimator : MonoBehaviour
 {
     private Animator animator;
 
+    private bool holdingChild = false;
+    
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -16,7 +18,10 @@ public class HandAnimator : MonoBehaviour
         BaseCharacterController.OnSetCrouch += Crouch;
         BaseFirstPersonController.OnSetRunning += Run;
         PlayerStun.OnSetStunned += Stun;
+        PlayerInteraction.OnTakeChild += SetHoldingChild;
+        PlayerInteraction.OnDeliverChild += SetNotHoldingChild;
     }
+
 
     private void Dash()
     {
@@ -37,11 +42,22 @@ public class HandAnimator : MonoBehaviour
         animator.SetBool("isStunned", b);
     }
 
+    private void SetHoldingChild(Child child)
+    {
+        animator.SetBool("holdingChild", true);
+    }
+    
+    private void SetNotHoldingChild()
+    {
+        animator.SetBool("holdingChild", false);
+    }
+    
     private void OnDestroy()
     {
         PlayerDash.OnDash -= Dash;
         BaseCharacterController.OnSetCrouch -= Crouch;
         BaseFirstPersonController.OnSetRunning -= Run;
         PlayerStun.OnSetStunned -= Stun;
+        PlayerInteraction.OnTakeChild -= SetHoldingChild;
     }
 }
