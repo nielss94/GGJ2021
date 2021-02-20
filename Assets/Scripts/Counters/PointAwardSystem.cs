@@ -22,7 +22,7 @@ public class PointAwardSystem : MonoBehaviour
     private int mediumPoints = 5;
     [SerializeField]
     private int longPoints = 0;
-    
+
     private TimeSystem timeSystem;
     private PointSystem pointSystem;
 
@@ -98,7 +98,7 @@ public class PointAwardSystem : MonoBehaviour
         else
         {
             extraPoints = longPoints;
-            OnLong.Invoke(standardPoints);
+            OnLong.Invoke(standardPoints + extraPoints);
         }
         
         pointSystem.AddPoints(standardPoints + extraPoints);
