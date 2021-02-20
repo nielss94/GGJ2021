@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardPoints: 6
-  shortTime: 15
-  mediumTime: 30
+  shortTime: 20
+  mediumTime: 40
   shortPoints: 4
   mediumPoints: 2
   longPoints: 0
