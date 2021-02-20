@@ -6,7 +6,6 @@ using Random = UnityEngine.Random;
 
 public class ChildAudio : MonoBehaviour
 {
-    public AudioClip[] randomVoiceLines;
     public AudioClip[] onTakenVoiceLines;
     public AudioClip[] onFailedTakenVoiceLines;
 
@@ -18,11 +17,17 @@ public class ChildAudio : MonoBehaviour
     private float previousVoiceLineTryTimestamp;
     private float nextVoiceLineTryTimestamp;
     private AudioSource audioSource;
+    private AudiopoolSystem audiopoolSystem;
     
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         nextVoiceLineTryTimestamp = Time.time + Random.Range(minInterval, maxInterval);
+    }
+
+    private void Start()
+    {
+        audiopoolSystem = AudiopoolSystem.Instance;
     }
 
     private void Update()
@@ -44,7 +49,14 @@ public class ChildAudio : MonoBehaviour
         int rand = Random.Range(0, 100);
         if (rand < chanceToDoVoiceLinePerInterval)
         {
-            audioSource.PlayOneShot(randomVoiceLines[Random.Range(0, randomVoiceLines.Length)]);
+            try
+            {
+                audioSource.PlayOneShot(audiopoolSystem.GetRandomVoiceLine());
+            }
+            catch (NoMoreAudioClipsException noMoreAudioClipsException)
+            {
+                // No new random voice line available 
+            }
         }
     }
 
