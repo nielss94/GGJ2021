@@ -852,6 +852,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_BorderWall
       objectReference: {fileID: 0}
+    - target: {fileID: 7430343531536656540, guid: 841b9dcb426c7f745bcee14c02502588,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.828
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430343531536656540, guid: 841b9dcb426c7f745bcee14c02502588,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.272
+      objectReference: {fileID: 0}
     - target: {fileID: 7930032837143476420, guid: 841b9dcb426c7f745bcee14c02502588,
         type: 3}
       propertyPath: m_RootOrder
