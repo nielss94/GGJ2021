@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8e57e113bf4de084b899e95870f28f65,
+    type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: c6a0b7f48cf89ac41a2dbb671d2ad626,
     type: 2}
 --- !u!196 &4
@@ -7086,32 +7087,32 @@ PrefabInstance:
     - target: {fileID: 3756542764391665255, guid: a902a94c95e863b42ac69833c9b153c4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5572696
+      value: 0.5572697
       objectReference: {fileID: 0}
     - target: {fileID: 3756542764391665255, guid: a902a94c95e863b42ac69833c9b153c4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06402611
+      value: 0.06402613
       objectReference: {fileID: 0}
     - target: {fileID: 3756542764391665255, guid: a902a94c95e863b42ac69833c9b153c4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09449324
+      value: 0.09449325
       objectReference: {fileID: 0}
     - target: {fileID: 3756542765182874697, guid: a902a94c95e863b42ac69833c9b153c4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5572696
+      value: 0.5572697
       objectReference: {fileID: 0}
     - target: {fileID: 3756542765182874697, guid: a902a94c95e863b42ac69833c9b153c4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06402611
+      value: 0.06402613
       objectReference: {fileID: 0}
     - target: {fileID: 3756542765182874697, guid: a902a94c95e863b42ac69833c9b153c4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09449324
+      value: 0.09449325
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a902a94c95e863b42ac69833c9b153c4, type: 3}
