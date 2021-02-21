@@ -3,7 +3,17 @@ guid: 08b7ef4175a8df54dbda10e6f3d1f9f1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SoftFoam_Box_Edge_Mat
+    second: {fileID: 2100000, guid: bf1ea8652223b884fb955349c579e7a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SoftFoam_Box_Modular_Mat
+    second: {fileID: 2100000, guid: bf1ea8652223b884fb955349c579e7a7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Cloth_NetAttatch_Mat
+    second: {fileID: 2100000, guid: 72dd7110fed2e66458749ea357b8f860, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cloth_NetMesh_Mat
+    second: {fileID: 2100000, guid: 0fbdeea5d2ed3314e82033234457a3a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert1
     second: {fileID: 2100000, guid: 128287186fe13d24e8b7c1c01a32641f, type: 2}
   materials:
