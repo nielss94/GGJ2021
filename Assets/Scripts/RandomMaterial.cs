@@ -23,7 +23,10 @@ public class RandomMaterial : MonoBehaviour
 
     public void Apply(Material material)
     {
-        renderer.material = material;
+        for (int i = 0; i < renderer.materials.Length; i++) {
+            renderer.materials[i] = material;
+        }
+        // renderer.material = material;
     }
 
     private void ApplyRandomMaterial()

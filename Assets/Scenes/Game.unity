@@ -38381,6 +38381,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3051280467187860434, guid: 1ec50706db30f9940bdbcc2b6c84a422,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6242655975499111621, guid: 1ec50706db30f9940bdbcc2b6c84a422,
         type: 3}
       propertyPath: m_Name
@@ -38773,10 +38778,6 @@ PrefabInstance:
       propertyPath: mainAudioSource
       value: 
       objectReference: {fileID: 1228876246}
-    - target: {fileID: 47670232, guid: e3550e8b3b5d98c45a5fb025e6746c71, type: 3}
-      propertyPath: possibleDialogs.Array.data[7].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7ebfd7bbbcc6c144f805a9b598f7fd53, type: 3}
     - target: {fileID: 169221635, guid: e3550e8b3b5d98c45a5fb025e6746c71, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -38785,14 +38786,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 659132915}
-    - target: {fileID: 2037830478, guid: e3550e8b3b5d98c45a5fb025e6746c71, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 43.174805
-      objectReference: {fileID: 0}
-    - target: {fileID: 2037830478, guid: e3550e8b3b5d98c45a5fb025e6746c71, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -425.89795
-      objectReference: {fileID: 0}
     - target: {fileID: 2055685096075013419, guid: e3550e8b3b5d98c45a5fb025e6746c71,
         type: 3}
       propertyPath: lostChildRenderer

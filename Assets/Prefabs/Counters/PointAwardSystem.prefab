@@ -43,9 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3deafdd84944b1f861ee1646ec3b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardPoints: 5
-  shortTime: 15
-  mediumTime: 30
-  shortPoints: 10
-  mediumPoints: 5
+  standardPoints: 6
+  shortTime: 20
+  mediumTime: 40
+  shortPoints: 4
+  mediumPoints: 2
   longPoints: 0
