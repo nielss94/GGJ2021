@@ -14,6 +14,7 @@ public class LostChildSystem : MonoBehaviour
     [SerializeField] private Child lostChild;
 
     private LostChildOrchestration lostChildOrchestration;
+    private MainMenu mainMenu;
     
     private void Awake()
     {
@@ -29,6 +30,9 @@ public class LostChildSystem : MonoBehaviour
         lostChildOrchestration = GetComponent<LostChildOrchestration>();
 
         GameManager.OnGameStarted += Orchestrate;
+
+        mainMenu = FindObjectOfType<MainMenu>();
+        if (mainMenu != null) mainMenu.OnMenuStarted += Orchestrate;
     }
 
     private void Update()
@@ -90,6 +94,7 @@ public class LostChildSystem : MonoBehaviour
     private void OnDestroy()
     {
         GameManager.OnGameStarted -= Orchestrate;
+        if (mainMenu) mainMenu.OnMenuStarted -= Orchestrate;
         Instance = null;
     }
 }

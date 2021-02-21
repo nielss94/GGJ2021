@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject mainMenu;
     public GameObject creditMenu;
+    public event Action OnMenuStarted = delegate { };
 
     private bool startClicked = false;
 
@@ -18,6 +19,7 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         StartCoroutine(LoadLevel());
+        OnMenuStarted.Invoke();
     }
     
     public void StartGame() {
