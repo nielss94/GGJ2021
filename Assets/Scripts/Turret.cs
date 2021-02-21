@@ -41,7 +41,7 @@ public class Turret : MonoBehaviour {
     }
 
     private void Shoot() {
-        if(fireSfx != null) {
+        if(fireSfx != null && fireSfxSource.enabled) {
             fireSfxSource.PlayOneShot(fireSfx[Random.Range(0,fireSfx.Length)], 0.8f);
         }
 
